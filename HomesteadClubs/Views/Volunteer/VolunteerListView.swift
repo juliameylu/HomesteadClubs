@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct VolunteerListView: View {
-    @ObservedObject var volunteerViewModel : VolunteerViewModel
+//    @ObservedObject var volunteerViewModel : VolunteerViewModel
+    @EnvironmentObject var volunteerViewModel : VolunteerViewModel
     
     @State var showNewVolunteerView: Bool = false
     
     var body: some View {
+        NavigationStack {
             ScrollView {
                 ForEach(volunteerViewModel.volunteers, id: \.id) { volunteer in
                     NavigationLink {
@@ -31,16 +33,17 @@ struct VolunteerListView: View {
                     }
                 }
             }
-            .navigationTitle("My Volunteers")
-//            .sheet(isPresented: $showNewVolunteerView) {
-//                VolunteerAddView(contactViewModel: contactViewModel)
-//            }
-//            .navigationBarItems(trailing:
-//                Button (action: {
-//                    showNewVolunteerView.toggle()
-//                }) {
-//                    Image(systemName: "plus")
-//                }
-//            )
+            .navigationTitle("Volunteer Hours")
+            //            .sheet(isPresented: $showNewVolunteerView) {
+            //                VolunteerAddView(contactViewModel: contactViewModel)
+            //            }
+            //            .navigationBarItems(trailing:
+            //                Button (action: {
+            //                    showNewVolunteerView.toggle()
+            //                }) {
+            //                    Image(systemName: "plus")
+            //                }
+            //            )
+        } // NavigationStack
     }
 }

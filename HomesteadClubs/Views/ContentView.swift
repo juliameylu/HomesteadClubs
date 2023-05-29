@@ -26,13 +26,21 @@ enum MenuDestination: Int, CaseIterable, Hashable {
 struct ContentView: View {
 //    @StateObject var contactViewModel = ContactViewModel()
 //    @StateObject var activityViewModel = ActivityViewModel()
-    @StateObject var volunteerViewModel = VolunteerViewModel()
+//    @StateObject var volunteerViewModel = VolunteerViewModel()
+    @EnvironmentObject var activityViewModel : ActivityViewModel
     
     var icontexts: [(emoji: String, title: String)] = [(emoji: "👫", title: "Members")]
     
     var body: some View {
         NavigationStack {
-            VStack {
+            ScrollView {
+                ForEach(activityViewModel.upcomingActivities, id: \.id) { activity in
+                    Text(activity.name ?? "")
+                        .font(.custom("Roboto-Bold", size: 20))
+                        .foregroundColor(Color.black)                }
+
+//            VStack {
+//                Text("Upcoming Activities")
                 //            ForEach(icontexts, id: \.self) {
                 //                icontext in OptionView(emoji: icontext.emoji,
                 //                                       title: icontext.title)
@@ -42,12 +50,12 @@ struct ContentView: View {
 //                                                ActivityListView(activityViewModel: activityViewModel, contactViewModel: contactViewModel))
 //                OptionView<ActivityListView>(emoji: "🚮", title: "Activities", destinationView:
 //                                                ActivityListView(activityViewModel: activityViewModel))
-                OptionView(emoji: "🕦", title: "Volunteer Hours", destinationView: VolunteerListView(volunteerViewModel: volunteerViewModel))
-                .padding(.horizontal)
-                .foregroundColor(.green)
-            }
-        }
-    }
+//                OptionView(emoji: "🕦", title: "Volunteer Hours", destinationView: VolunteerListView(volunteerViewModel: volunteerViewModel))
+//                .padding(.horizontal)
+//                .foregroundColor(.green)
+            } // ScrollView
+        } // NavigationStack
+    } // some View
 }
 
 struct OptionView<Destination: View>: View {

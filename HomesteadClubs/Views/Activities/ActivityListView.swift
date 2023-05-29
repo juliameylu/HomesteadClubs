@@ -23,6 +23,7 @@ struct ActivityListView: View {
     }
     
     var body: some View {
+        NavigationStack {
             ScrollView {
                 ForEach(activityViewModel.activities, id: \.id) { activity in
                     NavigationLink {
@@ -61,19 +62,20 @@ struct ActivityListView: View {
                         } // Button
                     } // contextMenu
                 } // ForEach
-//                .onDelete(perform: deleteActivity)
+                //                .onDelete(perform: deleteActivity)
             } // ScrollView
             .navigationTitle("Activites")
             .sheet(isPresented: $showActivityAddView) {
                 ActivityAddView(activityViewModel: activityViewModel, contactViewModel: contactViewModel)
             }
             .navigationBarItems(trailing:
-                Button (action: {
-                    showActivityAddView.toggle()
-                }) {
-                    Image(systemName: "plus")
-                }
+                                    Button (action: {
+                showActivityAddView.toggle()
+            }) {
+                Image(systemName: "plus")
+            }
             )
+        } // NavigationStack
     } // body
     
 //    func deleteActivity(at offsets: IndexSet) {

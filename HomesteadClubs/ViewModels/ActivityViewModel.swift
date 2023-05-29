@@ -12,6 +12,7 @@ import CoreData
 class ActivityViewModel: ObservableObject {
     private let viewContext = PersistenceController.shared.viewContext
     @Published var activities: [Activity] = []
+    @Published var upcomingActivities: [Activity] = []
 
     init() {
         fetchActivities()
@@ -22,6 +23,10 @@ class ActivityViewModel: ObservableObject {
 
         do {
             activities = try viewContext.fetch(request)
+            
+            let now = NSDate.now
+            upcomingActivities = activities.filter{ $0.beginDateTime! >= now }
+            
         } catch {
             print("DEBUG: Some error occured while fetching")
         }

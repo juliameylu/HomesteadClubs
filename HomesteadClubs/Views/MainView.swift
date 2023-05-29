@@ -25,6 +25,11 @@ struct MainView: View {
                     Image(systemName: "person.fill")
                     Text("Activities")
             }
+            VolunteerListView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Hours")
+            }
         } // TabView
     }
 }
@@ -37,5 +42,6 @@ struct MainView_Previews: PreviewProvider {
             .preferredColorScheme(.light)
             .environmentObject(ActivityViewModel())
             .environmentObject(ContactViewModel())
+            .environmentObject(VolunteerViewModel())
     }
 }
