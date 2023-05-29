@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "06A4C8B8-2AFA-41A1-9468-32A0707F174F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "783D741A-4E14-45B0-A01D-3B480CA3BF4B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Developer/HomesteadKeyClub/HomesteadKeyClub/Views/ContactDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "783D741A-4E14-45B0-A01D-3B480CA3BF4B - c2ec37ca30961013"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Text, SwiftUI.Text)&gt; in HomesteadClubs.ContactDetailView.body.getter : some"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/Views/ContactDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "541">
+               </Location>
+               <Location
+                  uuid = "783D741A-4E14-45B0-A01D-3B480CA3BF4B - c2ec37ca30961072"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Text, SwiftUI.Text)&gt; in HomesteadClubs.ContactDetailView.body.getter : some"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/Views/ContactDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "1180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E668114-FA32-48D1-85E8-3B67BD150F5F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/ViewModels/ActivityAttendanceViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchAttendanceFor(activity:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9E668114-FA32-48D1-85E8-3B67BD150F5F - f7a25321a24e67ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityAttendanceViewModel.fetchAttendanceFor(activityId: Foundation.UUID) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityAttendanceViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "806">
+               </Location>
+               <Location
+                  uuid = "9E668114-FA32-48D1-85E8-3B67BD150F5F - f7a25321a24e67fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityAttendanceViewModel.fetchAttendanceFor(activityId: Foundation.UUID) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityAttendanceViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1715">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3210513A-7E73-45DE-8622-2455425FD6E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/ViewModels/ActivityAttendanceViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fetchAttendanceFor(activity:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3210513A-7E73-45DE-8622-2455425FD6E1 - f7a25321a24e6753"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityAttendanceViewModel.fetchAttendanceFor(activityId: Foundation.UUID) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityAttendanceViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1965">
+               </Location>
+               <Location
+                  uuid = "3210513A-7E73-45DE-8622-2455425FD6E1 - c4df0fa8af98f52c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityAttendanceViewModel.fetchAttendanceFor(activity: HomesteadClubs.Activity) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityAttendanceViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "474">
+               </Location>
+               <Location
+                  uuid = "3210513A-7E73-45DE-8622-2455425FD6E1 - c4df0fa8af98f7f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityAttendanceViewModel.fetchAttendanceFor(activity: HomesteadClubs.Activity) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityAttendanceViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "474">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0B79688-CD10-45DB-8952-5EB6E2CB8F92"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/ViewModels/ActivityAttendanceViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchAttendances()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5205954-74F0-4AC6-B09B-6C84C498687C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "addAttendance(contact:activity:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D5205954-74F0-4AC6-B09B-6C84C498687C - 37a1675522654045"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityViewModel.addAttendee(contact: HomesteadClubs.Contact, activity: HomesteadClubs.Activity) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  uuid = "D5205954-74F0-4AC6-B09B-6C84C498687C - 311d0303cfb19c47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityViewModel.addAttendance(contact: HomesteadClubs.Contact, activity: HomesteadClubs.Activity) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  uuid = "D5205954-74F0-4AC6-B09B-6C84C498687C - 311d0303cfb19cfa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityViewModel.addAttendance(contact: HomesteadClubs.Contact, activity: HomesteadClubs.Activity) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "70">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB26F1DF-239B-4B7B-80A1-9713BBAB3FFC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchNonMembers(contacts:attendances:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EB26F1DF-239B-4B7B-80A1-9713BBAB3FFC - 5b443afd16c05ace"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityViewModel.fetchNonMembers(contacts: Swift.Array&lt;HomesteadClubs.Contact&gt;, attendances: Swift.Array&lt;HomesteadClubs.ActivityAttendance&gt;) -&gt; Swift.Array&lt;HomesteadClubs.Contact&gt;"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "EB26F1DF-239B-4B7B-80A1-9713BBAB3FFC - d00a17d6160f8f5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (HomesteadClubs.ActivityAttendance) -&gt; Swift.Optional&lt;HomesteadClubs.Contact&gt; in HomesteadClubs.ActivityViewModel.fetchNonMembers(contacts: Swift.Array&lt;HomesteadClubs.Contact&gt;, attendances: Swift.Array&lt;HomesteadClubs.ActivityAttendance&gt;) -&gt; Swift.Array&lt;HomesteadClubs.Contact&gt;"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0D91F79-6526-4A4E-920B-C0C8ACCF77FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchNonMembers(contacts:attendances:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A0D91F79-6526-4A4E-920B-C0C8ACCF77FE - 5b443afd16c05aed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityViewModel.fetchNonMembers(contacts: Swift.Array&lt;HomesteadClubs.Contact&gt;, attendances: Swift.Array&lt;HomesteadClubs.ActivityAttendance&gt;) -&gt; Swift.Array&lt;HomesteadClubs.Contact&gt;"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "A0D91F79-6526-4A4E-920B-C0C8ACCF77FE - 85b25275fbcd2fee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (HomesteadClubs.Contact) -&gt; Swift.Bool in HomesteadClubs.ActivityViewModel.fetchNonMembers(contacts: Swift.Array&lt;HomesteadClubs.Contact&gt;, attendances: Swift.Array&lt;HomesteadClubs.ActivityAttendance&gt;) -&gt; Swift.Array&lt;HomesteadClubs.Contact&gt;"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidvlu/Developer/HomesteadKeyClub/HomesteadKeyClub/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "45">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92F05764-9B5B-4C83-975F-FFD96AE136CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/Views/Volunteer/VolunteerListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

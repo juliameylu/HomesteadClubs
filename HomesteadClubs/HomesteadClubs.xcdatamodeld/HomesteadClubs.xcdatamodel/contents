@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activity" representedClassName=".Activity" syncable="YES">
+        <attribute name="beginDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="creditHours" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="endDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivityAttendance" inverseName="attending" inverseEntity="ActivityAttendance"/>
+        <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact"/>
+    </entity>
+    <entity name="ActivityAttendance" representedClassName=".ActivityAttendance" syncable="YES">
+        <relationship name="attendedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="attending" inverseEntity="Contact"/>
+        <relationship name="attending" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="attendances" inverseEntity="Activity"/>
+    </entity>
+    <entity name="Club" representedClassName=".Club" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClubMembership" inverseName="club" inverseEntity="ClubMembership"/>
+    </entity>
+    <entity name="ClubMembership" representedClassName=".ClubMembership" syncable="YES">
+        <attribute name="joinDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="leaveDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="volunteerHours" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="club" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Club" inverseName="members" inverseEntity="Club"/>
+        <relationship name="member" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="membership" inverseEntity="Contact"/>
+    </entity>
+    <entity name="Contact" representedClassName=".Contact" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="first_name" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="last_name" optional="YES" attributeType="String"/>
+        <attribute name="middle_name" optional="YES" attributeType="String"/>
+        <relationship name="attending" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivityAttendance" inverseName="attendedBy" inverseEntity="ActivityAttendance"/>
+        <relationship name="membership" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClubMembership" inverseName="member" inverseEntity="ClubMembership"/>
+    </entity>
+</model>
