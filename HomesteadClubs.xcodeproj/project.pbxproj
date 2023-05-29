@@ -38,6 +38,7 @@
 		2BBEDAC729FB751F00316CFD /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC429FB751F00316CFD /* ContactDetailView.swift */; };
 		2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC529FB751F00316CFD /* ContactAddView.swift */; };
 		2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC629FB751F00316CFD /* ContactListView.swift */; };
+		B0DFC7662A2571F900C4BD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0DFC7652A2571F900C4BD82 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		2BBEDAC429FB751F00316CFD /* ContactDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		2BBEDAC529FB751F00316CFD /* ContactAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactAddView.swift; sourceTree = "<group>"; };
 		2BBEDAC629FB751F00316CFD /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
+		B0DFC7652A2571F900C4BD82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		2BA0482829FA276700476352 /* HomesteadClubs */ = {
 			isa = PBXGroup;
 			children = (
+				B0DFC7652A2571F900C4BD82 /* Assets.xcassets */,
 				2BBEDADD29FB7C3E00316CFD /* CoreDataModels */,
 				2BBEDACA29FB766E00316CFD /* ViewModels */,
 				2BBEDAC329FB749B00316CFD /* Views */,
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA0483129FA276800476352 /* Preview Assets.xcassets in Resources */,
+				B0DFC7662A2571F900C4BD82 /* Assets.xcassets in Resources */,
 				2BA0482E29FA276800476352 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

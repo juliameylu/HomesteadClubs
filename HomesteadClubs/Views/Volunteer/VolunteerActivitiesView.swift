@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VolunteerActivitiesView: View {
-    @ObservedObject var volunteerViewModel: VolunteerViewModel
+    @EnvironmentObject var volunteerViewModel: VolunteerViewModel
     
     var volunteer: Volunteer
     

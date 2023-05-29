@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct VolunteerListView: View {
-//    @ObservedObject var volunteerViewModel : VolunteerViewModel
     @EnvironmentObject var volunteerViewModel : VolunteerViewModel
     
     @State var showNewVolunteerView: Bool = false
@@ -18,7 +17,7 @@ struct VolunteerListView: View {
             ScrollView {
                 ForEach(volunteerViewModel.volunteers, id: \.id) { volunteer in
                     NavigationLink {
-                        VolunteerActivitiesView(volunteerViewModel: volunteerViewModel, volunteer: volunteer)
+                        VolunteerActivitiesView(volunteer: volunteer)
                     } label: {
                         VStack(alignment: .leading) {
                             Text(volunteer.contact.first_name ?? "")

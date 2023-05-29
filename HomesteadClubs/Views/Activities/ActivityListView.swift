@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ActivityListView: View {
-//    @ObservedObject var activityViewModel : ActivityViewModel
-//    @ObservedObject var contactViewModel : ContactViewModel
     @EnvironmentObject var activityViewModel : ActivityViewModel
     @EnvironmentObject var contactViewModel : ContactViewModel
     
@@ -17,7 +15,6 @@ struct ActivityListView: View {
     
     let dateFormatter = DateFormatter()
 
-//    init(activityViewModel: ActivityViewModel, contactViewModel: ContactViewModel) {
     init() {
         dateFormatter.dateFormat = "YY/MM/dd hh::mm"
     }
@@ -27,7 +24,7 @@ struct ActivityListView: View {
             ScrollView {
                 ForEach(activityViewModel.activities, id: \.id) { activity in
                     NavigationLink {
-                        ActivityDetailView(activity: activity, activityViewModel: activityViewModel, contactViewModel: contactViewModel)
+                        ActivityDetailView(activity: activity)
                     } label: {
                         VStack(alignment: .leading) {
                             Text(activity.name ?? "")

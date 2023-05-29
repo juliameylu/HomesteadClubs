@@ -10,8 +10,8 @@ import SwiftUI
 struct ActivityEditView: View {
     var activity: Activity
     
-    @ObservedObject var activityViewModel: ActivityViewModel
-    @ObservedObject var contactViewModel: ContactViewModel
+    @EnvironmentObject var activityViewModel: ActivityViewModel
+    @EnvironmentObject var contactViewModel: ContactViewModel
     
     @Environment (\.presentationMode) var presentationMode
 
@@ -22,12 +22,9 @@ struct ActivityEditView: View {
     @State var creditHours: Int16
     @State var sponsor: Contact?
     
-    init(activity: Activity, activityViewModel: ActivityViewModel, contactViewModel: ContactViewModel) {
+    init(activity: Activity) {
         self.activity = activity
 
-        self.activityViewModel = activityViewModel
-        self.contactViewModel = contactViewModel
-        
         _name = State(initialValue: activity.name ?? "")
         _notes = State(initialValue: activity.notes ?? "")
         _beginDateTime = State(initialValue: activity.beginDateTime ?? Date.now)

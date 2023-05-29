@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ActivityDetailView: View {
-    @ObservedObject var activityViewModel: ActivityViewModel
-    @ObservedObject var contactViewModel: ContactViewModel
+    @EnvironmentObject var activityViewModel: ActivityViewModel
+    @EnvironmentObject var contactViewModel: ContactViewModel
 
     @State private var isPresentingEditView = false
     @State private var newAttendee: Contact?
@@ -18,12 +18,9 @@ struct ActivityDetailView: View {
 
     let dateFormatter = DateFormatter()
 
-    init(activity: Activity, activityViewModel: ActivityViewModel, contactViewModel: ContactViewModel) {
+    init(activity: Activity) {
         self.activity = activity
 
-        self.activityViewModel = activityViewModel
-        self.contactViewModel = contactViewModel
-        
         dateFormatter.dateFormat = "YY/MM/dd hh::mm"
     }
      
@@ -67,7 +64,7 @@ struct ActivityDetailView: View {
                         Button("Edit", action: { isPresentingEditView = true })
                     }
                     .sheet(isPresented: $isPresentingEditView) {
-                        ActivityEditView(activity: activity, activityViewModel: activityViewModel, contactViewModel: contactViewModel)
+                        ActivityEditView(activity: activity)
                             .navigationTitle(activity.name ?? "")
                             .toolbar {
                                 ToolbarItem(placement: .cancellationAction) {

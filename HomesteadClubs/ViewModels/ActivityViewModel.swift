@@ -25,7 +25,8 @@ class ActivityViewModel: ObservableObject {
             activities = try viewContext.fetch(request)
             
             let now = NSDate.now
-            upcomingActivities = activities.filter{ $0.beginDateTime! >= now }
+            // TODO: Fix optional
+            upcomingActivities = activities.filter{ $0.beginDateTime! >= now }.sorted{ $0.beginDateTime! < $1.beginDateTime! }
             
         } catch {
             print("DEBUG: Some error occured while fetching")

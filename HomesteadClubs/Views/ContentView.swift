@@ -24,36 +24,44 @@ enum MenuDestination: Int, CaseIterable, Hashable {
 }
 
 struct ContentView: View {
-//    @StateObject var contactViewModel = ContactViewModel()
-//    @StateObject var activityViewModel = ActivityViewModel()
-//    @StateObject var volunteerViewModel = VolunteerViewModel()
     @EnvironmentObject var activityViewModel : ActivityViewModel
     
     var icontexts: [(emoji: String, title: String)] = [(emoji: "👫", title: "Members")]
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            List {
                 ForEach(activityViewModel.upcomingActivities, id: \.id) { activity in
-                    Text(activity.name ?? "")
-                        .font(.custom("Roboto-Bold", size: 20))
-                        .foregroundColor(Color.black)                }
-
-//            VStack {
-//                Text("Upcoming Activities")
-                //            ForEach(icontexts, id: \.self) {
-                //                icontext in OptionView(emoji: icontext.emoji,
-                //                                       title: icontext.title)
-                //            }
-//                OptionView<ContactListView>(emoji: "👫", title: "Members", destinationView: ContactListView(contactViewModel: contactViewModel))
-//                OptionView<ActivityListView>(emoji: "🚮", title: "Activities", destinationView:
-//                                                ActivityListView(activityViewModel: activityViewModel, contactViewModel: contactViewModel))
-//                OptionView<ActivityListView>(emoji: "🚮", title: "Activities", destinationView:
-//                                                ActivityListView(activityViewModel: activityViewModel))
-//                OptionView(emoji: "🕦", title: "Volunteer Hours", destinationView: VolunteerListView(volunteerViewModel: volunteerViewModel))
-//                .padding(.horizontal)
-//                .foregroundColor(.green)
-            } // ScrollView
+                    NavigationLink {
+                        ActivityDetailView(activity: activity)
+                    } label: {
+                        VStack(alignment: .leading) {
+                            Text(activity.name ?? "")
+                                .fontWeight(.semibold)
+                                .font(.headline)
+                            HStack {
+                                Text("From:")
+                                Text(activity.beginDateTime!, style: .date)
+                                Text(activity.beginDateTime!, style: .time)
+                            }
+                            HStack {
+                                Text("To:")
+                                Text(activity.endDateTime!, style: .date)
+                                Text(activity.endDateTime!, style: .time)
+                            }
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
+                        .padding(.bottom)
+                    }
+//                    Text(activity.name ?? "")
+//                        .font(.custom("Roboto-Bold", size: 20))
+//                        .foregroundColor(Color.black)
+                    
+                } // ForEach
+            } // List
+            .navigationTitle("Upcoming Activities")
+            .listStyle(.insetGrouped)
         } // NavigationStack
     } // some View
 }
