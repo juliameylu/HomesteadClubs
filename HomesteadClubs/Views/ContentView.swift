@@ -36,9 +36,15 @@ struct ContentView: View {
                         ActivityDetailView(activity: activity)
                     } label: {
                         VStack(alignment: .leading) {
-                            Text(activity.name ?? "")
-                                .fontWeight(.semibold)
-                                .font(.headline)
+                            HStack {
+                                Image("park")
+                                    .clipShape(Circle())
+                                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+
+                                Text(activity.name ?? "")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             HStack {
                                 Text("From:")
                                 Text(activity.beginDateTime!, style: .date)

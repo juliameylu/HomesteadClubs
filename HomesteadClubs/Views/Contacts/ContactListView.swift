@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContactListView: View {
     @EnvironmentObject var contactViewModel : ContactViewModel
-//    @ObservedObject var contactViewModel : ContactViewModel
     
     @State var showNewContactView: Bool = false
     
@@ -20,7 +19,11 @@ struct ContactListView: View {
                     NavigationLink {
                         ContactDetailView(contactViewModel: contactViewModel, contact: contact)
                     } label: {
-                        VStack(alignment: .leading) {
+//                        VStack(alignment: .leading) {
+                        HStack {
+                            Image("contact")
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.gray, lineWidth: 2))
                             Text(contact.first_name ?? "")
                                 .fontWeight(.semibold)
                                 .font(.headline)
