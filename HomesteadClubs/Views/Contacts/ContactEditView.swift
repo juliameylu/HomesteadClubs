@@ -8,27 +8,21 @@
 import SwiftUI
 
 struct ContactEditView: View {
-    @ObservedObject var contactViewModel: ContactViewModel
+    @EnvironmentObject var contactViewModel: ContactViewModel
     
     var contact: Contact
     
     @Environment (\.presentationMode) var presentationMode
 
-    @State var firstName: String
-    @State var lastName: String
-    @State var middleName: String
-    @State var email: String
-    @State var phone: String
+    @State var firstName: String = ""
+    @State var lastName: String = ""
+    @State var middleName: String = ""
+    @State var email: String = ""
+    @State var phone: String = ""
     
-    init(contactViewModel: ContactViewModel, contact: Contact) {
-        self.contactViewModel = contactViewModel
+    init(
+        contact: Contact) {
         self.contact = contact
-        
-        _firstName = State(initialValue: contact.first_name ?? "")
-        _middleName = State(initialValue: contact.middle_name ?? "")
-        _lastName = State(initialValue: contact.last_name ?? "")
-        _email = State(initialValue: contact.email ?? "")
-        _phone = State(initialValue: contact.phone ?? "")
     }
     
     @State var readyToNavigate = false
@@ -39,8 +33,8 @@ struct ContactEditView: View {
             VStack (spacing: 20) {
                 Image("contact")
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                Text("Edit")
+                    .overlay(Circle().stroke(Color.gray, lineWidth: 10))
+                Text("Edit Contact")
                     .font(.headline)
                 TextField("First Name", text: $firstName)
                     .padding(20)
@@ -84,6 +78,14 @@ struct ContactEditView: View {
                     }) {
                         Text("Done")
                     })
+            }
+            // initialize state vars in onAppear because the EnvironmentObject is injected after the view constructor
+            .onAppear {
+                self.firstName = contact.first_name ?? ""
+                self.middleName = contact.middle_name ?? ""
+                self.lastName = contact.last_name ?? ""
+                self.email = contact.email ?? ""
+                self.phone = contact.phone ?? ""
             }
     }
 }

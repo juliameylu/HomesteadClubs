@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactDetailView: View {
-    @ObservedObject var contactViewModel: ContactViewModel
+    @EnvironmentObject var contactViewModel: ContactViewModel
     
     var contact: Contact
     
@@ -53,7 +53,8 @@ struct ContactDetailView: View {
                 Button("Edit", action: { isPresentingEditView = true })
             } // toolbar
             .sheet(isPresented: $isPresentingEditView) {
-                ContactEditView(contactViewModel: contactViewModel, contact: contact)
+                ContactEditView(
+                    contact: contact)
                     .navigationTitle(contact.first_name ?? "")
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {

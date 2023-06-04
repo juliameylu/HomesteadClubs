@@ -8,44 +8,47 @@
 import SwiftUI
 
 struct ContactAddView: View {
-    @ObservedObject var contactViewModel: ContactViewModel
+    @EnvironmentObject var contactViewModel: ContactViewModel
 
-//    @Environment(\.managedObjectContext) private var viewContext
     @Environment (\.presentationMode) var presentationMode
 
     @State var firstName: String = ""
     @State var lastName: String = ""
     @State var middleName: String = ""
     @State var email: String = ""
+    @State var phone: String = ""
     
     @State var readyToNavigate = false
 
     var body: some View {
         NavigationStack {
             VStack (spacing: 20) {
-                
-                Text("Add a New Contact:")
+                Text("Add New Contact")
                     .font(.headline)
-                
+                Image("contact")
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
                 TextField("First Name", text: $firstName)
                     .padding(20)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
-                
                 TextField("Middle Name or Initial", text: $middleName)
                     .padding(20)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
-                
                 TextField("Last Name", text: $lastName)
                     .padding(20)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
-                
                 TextField("Email", text: $email)
                     .padding(20)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
+                TextField("Phone", text: $phone)
+                    .padding(20)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+
             } // VStack
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(
@@ -55,7 +58,7 @@ struct ContactAddView: View {
                     }, // Button
                 trailing:
                     Button(action: {
-                        contactViewModel.addContact(firstName: firstName, middleName: middleName, lastName: lastName, email: email)
+                        contactViewModel.addContact(firstName: firstName, middleName: middleName, lastName: lastName, email: email, phone: phone)
                         self.readyToNavigate = true
                         self.presentationMode.wrappedValue.dismiss()
                         } // action

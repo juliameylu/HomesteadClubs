@@ -17,7 +17,7 @@ struct ContactListView: View {
             ScrollView {
                 ForEach(contactViewModel.contacts, id: \.id) { contact in
                     NavigationLink {
-                        ContactDetailView(contactViewModel: contactViewModel, contact: contact)
+                        ContactDetailView(contact: contact)
                     } label: {
                         HStack {
                             Image("contact")
@@ -47,7 +47,7 @@ struct ContactListView: View {
             }
             .navigationTitle("My Contacts")
             .sheet(isPresented: $showNewContactView) {
-                ContactAddView(contactViewModel: contactViewModel)
+                ContactAddView()
             }
             .navigationBarItems(trailing:
                                     Button (action: {

@@ -26,7 +26,7 @@ class ContactViewModel: ObservableObject {
         }
     }
 
-    func addContact(firstName: String, middleName: String, lastName: String, email: String) {
+    func addContact(firstName: String, middleName: String, lastName: String, email: String, phone: String) {
         let contact = Contact(context: viewContext)
         
         contact.id = UUID()
@@ -34,6 +34,7 @@ class ContactViewModel: ObservableObject {
         contact.middle_name = middleName
         contact.last_name = lastName
         contact.email = email
+        contact.phone = phone
 
         save()
         fetchContacts()
