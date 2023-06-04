@@ -38,6 +38,8 @@
 		B096D2822A2C122000498C33 /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2782A2C122000498C33 /* Club+CoreDataProperties.swift */; };
 		B096D2832A2C122000498C33 /* ClubMembership+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2792A2C122000498C33 /* ClubMembership+CoreDataClass.swift */; };
 		B096D2842A2C122000498C33 /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D27A2A2C122000498C33 /* ClubMembership+CoreDataProperties.swift */; };
+		B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2852A2D1EA200498C33 /* AttendeeListView.swift */; };
+		B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2872A2D231600498C33 /* AttendeeAddView.swift */; };
 		B0DFC7662A2571F900C4BD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0DFC7652A2571F900C4BD82 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		B096D2782A2C122000498C33 /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B096D2792A2C122000498C33 /* ClubMembership+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		B096D27A2A2C122000498C33 /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2852A2D1EA200498C33 /* AttendeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListView.swift; sourceTree = "<group>"; };
+		B096D2872A2D231600498C33 /* AttendeeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeAddView.swift; sourceTree = "<group>"; };
 		B0DFC7652A2571F900C4BD82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -155,6 +159,8 @@
 				2BB8E0882A072C4800CB3F2D /* ActivityDetailView.swift */,
 				2BB8E08A2A072C5B00CB3F2D /* ActivityEditView.swift */,
 				2BB8E08C2A072C6B00CB3F2D /* ActivityAddView.swift */,
+				B096D2852A2D1EA200498C33 /* AttendeeListView.swift */,
+				B096D2872A2D231600498C33 /* AttendeeAddView.swift */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				2B7AB1A52A198DD700A1C993 /* VolunteerActivitiesView.swift in Sources */,
 				B096D2802A2C122000498C33 /* Activity+CoreDataProperties.swift in Sources */,
 				B096D2822A2C122000498C33 /* Club+CoreDataProperties.swift in Sources */,
+				B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */,
 				2BB8E0892A072C4800CB3F2D /* ActivityDetailView.swift in Sources */,
 				2B7AB1B12A242D9900A1C993 /* PersistenceController.swift in Sources */,
 				2BB8E08D2A072C6B00CB3F2D /* ActivityAddView.swift in Sources */,
@@ -294,6 +301,7 @@
 				2BA0482A29FA276700476352 /* HomesteadClubsApp.swift in Sources */,
 				2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */,
 				2B7AB1A72A19938400A1C993 /* VolunteerViewModel.swift in Sources */,
+				B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */,
 				B096D2812A2C122000498C33 /* Club+CoreDataClass.swift in Sources */,
 				2B7AB1A92A19981D00A1C993 /* Volunteer.swift in Sources */,
 				2B7AB1AB2A24101C00A1C993 /* MainView.swift in Sources */,

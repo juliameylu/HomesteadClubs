@@ -34,24 +34,30 @@ struct ContactEditView: View {
                 Image("contact")
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.gray, lineWidth: 10))
+                
                 Text("Edit Contact")
                     .font(.headline)
+                
                 TextField("First Name", text: $firstName)
                     .padding(20)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
+                
                 TextField("Middle Name or Initial", text: $middleName)
                     .padding(20)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
+                
                 TextField("Last Name", text: $lastName)
                     .padding(20)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
+                
                 TextField("Email", text: $email)
                     .padding(20)
                     .background(Color(.systemGray6))
                     .cornerRadius(8)
+                
                 TextField("Phone", text: $phone)
                     .padding(20)
                     .background(Color(.systemGray6))
@@ -79,7 +85,7 @@ struct ContactEditView: View {
                         Text("Done")
                     })
             }
-            // initialize state vars in onAppear because the EnvironmentObject is injected after the view constructor
+            // initialize state vars in onAppear because the EnvironmentObject is injected (created) after the view constructor
             .onAppear {
                 self.firstName = contact.first_name ?? ""
                 self.middleName = contact.middle_name ?? ""

@@ -38,8 +38,12 @@ struct ActivityAddView: View {
     var body: some View {
         NavigationStack {
             VStack (spacing: 20) {
-                Text("Add a New Activity:")
+                Text("Add New Activity")
                     .font(.headline)
+                
+                Image("park")
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
                 
                 TextField("Name", text: $name)
                     .padding(20)

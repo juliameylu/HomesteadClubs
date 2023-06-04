@@ -45,25 +45,24 @@ struct ContentView: View {
                                     .fontWeight(.semibold)
                                     .font(.headline)
                             }
-                            HStack {
-                                Text("From:")
-                                Text(activity.beginDateTime!, style: .date)
-                                Text(activity.beginDateTime!, style: .time)
-                            }
-                            HStack {
-                                Text("To:")
-                                Text(activity.endDateTime!, style: .date)
-                                Text(activity.endDateTime!, style: .time)
+                            
+                            Grid(alignment: .leadingFirstTextBaseline) {
+                                GridRow {
+                                    Text("From:")
+                                    Text(activity.beginDateTime ?? Date.now, style: .date)
+                                    Text(activity.beginDateTime ?? Date.now, style: .time)
+                                }
+                                GridRow {
+                                    Text("To:")
+                                    Text(activity.endDateTime ?? Date.now, style: .date)
+                                    Text(activity.endDateTime ?? Date.now, style: .time)
+                                }
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                         .padding(.bottom)
                     }
-//                    Text(activity.name ?? "")
-//                        .font(.custom("Roboto-Bold", size: 20))
-//                        .foregroundColor(Color.black)
-                    
                 } // ForEach
             } // List
             .navigationTitle("Upcoming Activities")

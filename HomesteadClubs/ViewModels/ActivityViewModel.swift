@@ -23,6 +23,8 @@ class ActivityViewModel: ObservableObject {
 
         do {
             activities = try viewContext.fetch(request)
+            // Sort by most recent activities first
+            activities = activities.sorted{ $0.beginDateTime! > $1.beginDateTime! }
             
             let now = NSDate.now
             // TODO: Fix optional
@@ -61,7 +63,20 @@ class ActivityViewModel: ObservableObject {
         
         saveAndReinitialize()
     }
-    
+
+    func addAttendances(attendees: Set<Contact>, activity: Activity) {
+        let attendances = Set(attendees.map {
+            let attendance = ActivityAttendance(context: viewContext)
+            attendance.attendedBy = $0
+            attendance.attending = activity
+            return attendance
+        })
+
+        activity.addToAttendances(attendances as NSSet)
+        
+        saveAndReinitialize()
+    }
+
     func removeAttendance(attendance: ActivityAttendance) {
         attendance.attending!.removeFromAttendances(attendance)
         attendance.attendedBy!.removeFromAttending(attendance)

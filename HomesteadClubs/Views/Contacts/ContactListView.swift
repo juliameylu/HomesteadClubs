@@ -23,11 +23,14 @@ struct ContactListView: View {
                             Image("contact")
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                            
                             Text(contact.first_name ?? "")
                                 .fontWeight(.semibold)
                                 .font(.headline)
+                            
                             Text(contact.middle_name ?? "")
                                 .font(.subheadline)
+                            
                             Text(contact.last_name ?? "")
                                 .font(.subheadline)
                         }

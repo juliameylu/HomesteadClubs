@@ -13,12 +13,6 @@ struct ActivityListView: View {
     
     @State var showActivityAddView: Bool = false
     
-    let dateFormatter = DateFormatter()
-
-    init() {
-        dateFormatter.dateFormat = "YY/MM/dd hh::mm"
-    }
-    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -27,24 +21,28 @@ struct ActivityListView: View {
                         ActivityDetailView(activity: activity)
                     } label: {
                         VStack(alignment: .leading) {
-                            Text(activity.name ?? "")
-                                .fontWeight(.semibold)
-                                .font(.headline)
+                            HStack {
+                                Image("park")
+                                    .clipShape(Circle())
+                                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+
+                                Text(activity.name ?? "")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
-                            Text(activity.notes ?? "")
-                                .font(.subheadline)
-                            
-                            Text(dateFormatter.string(from: activity.beginDateTime ?? Date.now))
-                                .font(.subheadline)
-                            
-                            Text(dateFormatter.string(from: activity.endDateTime ?? Date.now))
-                                .font(.subheadline)
-                            
-                            Text(String(activity.creditHours))
-                                .font(.subheadline)
-                            
-                            Text(String(activity.sponsor?.first_name ?? ""))
-                                .font(.subheadline)
+                            Grid(alignment: .leadingFirstTextBaseline) {
+                                GridRow {
+                                    Text("From:")
+                                    Text(activity.beginDateTime ?? Date.now, style: .date)
+                                    Text(activity.beginDateTime ?? Date.now, style: .time)
+                                }
+                                GridRow {
+                                    Text("To:")
+                                    Text(activity.endDateTime ?? Date.now, style: .date)
+                                    Text(activity.endDateTime ?? Date.now, style: .time)
+                                }
+                            }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
@@ -61,7 +59,7 @@ struct ActivityListView: View {
                 } // ForEach
                 //                .onDelete(perform: deleteActivity)
             } // ScrollView
-            .navigationTitle("Activites")
+            .navigationTitle("All Activites")
             .sheet(isPresented: $showActivityAddView) {
                 ActivityAddView(activityViewModel: activityViewModel, contactViewModel: contactViewModel)
             }
@@ -74,9 +72,5 @@ struct ActivityListView: View {
             )
         } // NavigationStack
     } // body
-    
-//    func deleteActivity(at offsets: IndexSet) {
-//        activityViewModel.delete(activity: <#T##Activity#>)
-//    }
 }
 
