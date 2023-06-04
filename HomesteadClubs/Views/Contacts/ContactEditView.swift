@@ -9,78 +9,83 @@ import SwiftUI
 
 struct ContactEditView: View {
     @EnvironmentObject var contactViewModel: ContactViewModel
+    
     @Environment (\.presentationMode) var presentationMode
-
+    
     @State var firstName: String = ""
     @State var lastName: String = ""
     @State var middleName: String = ""
     @State var email: String = ""
     @State var phone: String = ""
-
-    @State var readyToNavigate = false
-
-    var contact: Contact
     
-    init(contact: Contact) {
-        self.contact = contact
-    }
+    @State var readyToNavigate = false
+    
+    var contact: Contact
     
     var body: some View {
         NavigationStack {
-            VStack (spacing: 20) {
-                Image("contact")
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 10))
-                
-                Text("Edit Contact")
-                    .font(.headline)
-                
-                TextField("First Name", text: $firstName)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                TextField("Middle Name or Initial", text: $middleName)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                TextField("Last Name", text: $lastName)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                TextField("Email", text: $email)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                TextField("Phone", text: $phone)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
+            VStack {
+                HStack {
+                    Image("contact")
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.gray, lineWidth: 10))
+                    
+                    Text("Edit Contact")
+                }
+                Form {
+                    Section("Name") {
+                        TextField("First Name", text: $firstName)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                        
+                        TextField("Middle Name or Initial", text: $middleName)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                        
+                        TextField("Last Name", text: $lastName)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    } // Section Name
+                    
+                    Section("Email") {
+                        TextField("Email", text: $email)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    }
+                    
+                    Section("Phone") {
+                        TextField("Phone", text: $phone)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    }
+                } // Form
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(
+                    leading:
+                        Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
+                            Text("Cancel")
+                        },
+                    trailing:
+                        Button(action: {
+                            contact.first_name = firstName
+                            contact.middle_name = middleName
+                            contact.last_name = lastName
+                            contact.email = email
+                            contact.phone = phone
+                            
+                            contactViewModel.editContact(contact: contact)
+                            
+                            self.readyToNavigate = true
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Text("Done")
+                        }) // navigationBarItems, Form
             } // VStack
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(
-                leading:
-                    Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
-                        Text("Cancel")
-                    },
-                trailing:
-                    Button(action: {
-                        contact.first_name = firstName
-                        contact.middle_name = middleName
-                        contact.last_name = lastName
-                        contact.email = email
-                        contact.phone = phone
-                        
-                        contactViewModel.editContact(contact: contact)
-                        
-                        self.readyToNavigate = true
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Text("Done")
-                    }) // navigationBarItems
         } // NavigationStack
         // initialize state vars in onAppear because the EnvironmentObject is injected (created) after the view constructor
         .onAppear {
