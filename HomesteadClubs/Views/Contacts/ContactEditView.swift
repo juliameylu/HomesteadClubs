@@ -9,9 +9,6 @@ import SwiftUI
 
 struct ContactEditView: View {
     @EnvironmentObject var contactViewModel: ContactViewModel
-    
-    var contact: Contact
-    
     @Environment (\.presentationMode) var presentationMode
 
     @State var firstName: String = ""
@@ -19,16 +16,16 @@ struct ContactEditView: View {
     @State var middleName: String = ""
     @State var email: String = ""
     @State var phone: String = ""
+
+    @State var readyToNavigate = false
+
+    var contact: Contact
     
-    init(
-        contact: Contact) {
+    init(contact: Contact) {
         self.contact = contact
     }
     
-    @State var readyToNavigate = false
-
     var body: some View {
-
         NavigationStack {
             VStack (spacing: 20) {
                 Image("contact")
@@ -76,22 +73,22 @@ struct ContactEditView: View {
                         contact.last_name = lastName
                         contact.email = email
                         contact.phone = phone
-                    
+                        
                         contactViewModel.editContact(contact: contact)
                         
                         self.readyToNavigate = true
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("Done")
-                    })
-            }
-            // initialize state vars in onAppear because the EnvironmentObject is injected (created) after the view constructor
-            .onAppear {
-                self.firstName = contact.first_name ?? ""
-                self.middleName = contact.middle_name ?? ""
-                self.lastName = contact.last_name ?? ""
-                self.email = contact.email ?? ""
-                self.phone = contact.phone ?? ""
-            }
-    }
+                    }) // navigationBarItems
+        } // NavigationStack
+        // initialize state vars in onAppear because the EnvironmentObject is injected (created) after the view constructor
+        .onAppear {
+            self.firstName = contact.first_name ?? ""
+            self.middleName = contact.middle_name ?? ""
+            self.lastName = contact.last_name ?? ""
+            self.email = contact.email ?? ""
+            self.phone = contact.phone ?? ""
+        }
+    } // var body
 }
