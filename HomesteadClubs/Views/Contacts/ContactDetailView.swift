@@ -16,22 +16,38 @@ struct ContactDetailView: View {
  
     var body: some View {
         NavigationStack {
-            VStack {
-                Text(contact.first_name ?? "")
-                    .font(.custom("Roboto-Bold", size: 20))
-                    .foregroundColor(Color.black)
+            Form {
+                Section(header: Text("Name")) {
+                    HStack {
+                        Image("contact")
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                        
+                        Text(contact.first_name ?? "")
+                            .font(.custom("Roboto-Bold", size: 20))
+                            .foregroundColor(Color.black)
+                        
+                        Text(contact.middle_name ?? "")
+                            .font(.custom("Roboto-Bold", size: 20))
+                            .foregroundColor(Color.black)
+                        
+                        Text(contact.last_name ?? "")
+                            .font(.custom("Roboto-Bold", size: 20))
+                            .foregroundColor(Color.black)
+                    } // VStack
+                } // Section
                 
-                Text(contact.middle_name ?? "")
-                    .font(.custom("Roboto-Bold", size: 20))
-                    .foregroundColor(Color.black)
+                Section(header: Text("Email")) {
+                    Text(contact.email ?? "")
+                        .font(.custom("Roboto-Bold", size: 20))
+                        .foregroundColor(Color.black)
+                } // Section
                 
-                Text(contact.last_name ?? "")
-                    .font(.custom("Roboto-Bold", size: 20))
-                    .foregroundColor(Color.black)
-                
-                Text(contact.email ?? "")
-                    .font(.custom("Roboto-Bold", size: 20))
-                    .foregroundColor(Color.black)
+                Section(header: Text("Phone")) {
+                    Text(contact.phone ?? "")
+                        .font(.custom("Roboto-Bold", size: 20))
+                        .foregroundColor(Color.black)
+                } // Section
             } // VStack
             .toolbar {
                 Button("Edit", action: { isPresentingEditView = true })
@@ -55,3 +71,9 @@ struct ContactDetailView: View {
         } // NavigationStack
     }
 }
+
+//struct ContactDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContactDetailView()
+//    }
+//}

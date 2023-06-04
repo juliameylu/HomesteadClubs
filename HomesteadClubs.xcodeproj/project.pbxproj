@@ -7,16 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B2264EC2A11B330003AD6BE /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264E22A11B330003AD6BE /* Activity+CoreDataClass.swift */; };
-		2B2264ED2A11B330003AD6BE /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264E32A11B330003AD6BE /* Activity+CoreDataProperties.swift */; };
-		2B2264EE2A11B330003AD6BE /* ActivityAttendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264E42A11B330003AD6BE /* ActivityAttendance+CoreDataClass.swift */; };
-		2B2264EF2A11B330003AD6BE /* ActivityAttendance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264E52A11B330003AD6BE /* ActivityAttendance+CoreDataProperties.swift */; };
-		2B2264F02A11B330003AD6BE /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264E62A11B330003AD6BE /* Contact+CoreDataClass.swift */; };
-		2B2264F12A11B330003AD6BE /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264E72A11B330003AD6BE /* Contact+CoreDataProperties.swift */; };
-		2B2264F22A11B330003AD6BE /* ClubMembership+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264E82A11B330003AD6BE /* ClubMembership+CoreDataClass.swift */; };
-		2B2264F32A11B330003AD6BE /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264E92A11B330003AD6BE /* ClubMembership+CoreDataProperties.swift */; };
-		2B2264F42A11B330003AD6BE /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264EA2A11B330003AD6BE /* Club+CoreDataClass.swift */; };
-		2B2264F52A11B330003AD6BE /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2264EB2A11B330003AD6BE /* Club+CoreDataProperties.swift */; };
 		2B7AB1A32A198DB900A1C993 /* VolunteerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7AB1A22A198DB900A1C993 /* VolunteerListView.swift */; };
 		2B7AB1A52A198DD700A1C993 /* VolunteerActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7AB1A42A198DD700A1C993 /* VolunteerActivitiesView.swift */; };
 		2B7AB1A72A19938400A1C993 /* VolunteerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7AB1A62A19938400A1C993 /* VolunteerViewModel.swift */; };
@@ -38,20 +28,20 @@
 		2BBEDAC729FB751F00316CFD /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC429FB751F00316CFD /* ContactDetailView.swift */; };
 		2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC529FB751F00316CFD /* ContactAddView.swift */; };
 		2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC629FB751F00316CFD /* ContactListView.swift */; };
+		B096D27B2A2C122000498C33 /* ActivityAttendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2712A2C122000498C33 /* ActivityAttendance+CoreDataClass.swift */; };
+		B096D27C2A2C122000498C33 /* ActivityAttendance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2722A2C122000498C33 /* ActivityAttendance+CoreDataProperties.swift */; };
+		B096D27D2A2C122000498C33 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2732A2C122000498C33 /* Contact+CoreDataClass.swift */; };
+		B096D27E2A2C122000498C33 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2742A2C122000498C33 /* Contact+CoreDataProperties.swift */; };
+		B096D27F2A2C122000498C33 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2752A2C122000498C33 /* Activity+CoreDataClass.swift */; };
+		B096D2802A2C122000498C33 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2762A2C122000498C33 /* Activity+CoreDataProperties.swift */; };
+		B096D2812A2C122000498C33 /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2772A2C122000498C33 /* Club+CoreDataClass.swift */; };
+		B096D2822A2C122000498C33 /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2782A2C122000498C33 /* Club+CoreDataProperties.swift */; };
+		B096D2832A2C122000498C33 /* ClubMembership+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2792A2C122000498C33 /* ClubMembership+CoreDataClass.swift */; };
+		B096D2842A2C122000498C33 /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D27A2A2C122000498C33 /* ClubMembership+CoreDataProperties.swift */; };
 		B0DFC7662A2571F900C4BD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0DFC7652A2571F900C4BD82 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B2264E22A11B330003AD6BE /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264E32A11B330003AD6BE /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264E42A11B330003AD6BE /* ActivityAttendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264E52A11B330003AD6BE /* ActivityAttendance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264E62A11B330003AD6BE /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264E72A11B330003AD6BE /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264E82A11B330003AD6BE /* ClubMembership+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264E92A11B330003AD6BE /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264EA2A11B330003AD6BE /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2B2264EB2A11B330003AD6BE /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		2B7AB1A22A198DB900A1C993 /* VolunteerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerListView.swift; sourceTree = "<group>"; };
 		2B7AB1A42A198DD700A1C993 /* VolunteerActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerActivitiesView.swift; sourceTree = "<group>"; };
 		2B7AB1A62A19938400A1C993 /* VolunteerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerViewModel.swift; sourceTree = "<group>"; };
@@ -74,6 +64,16 @@
 		2BBEDAC429FB751F00316CFD /* ContactDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		2BBEDAC529FB751F00316CFD /* ContactAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactAddView.swift; sourceTree = "<group>"; };
 		2BBEDAC629FB751F00316CFD /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
+		B096D2712A2C122000498C33 /* ActivityAttendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2722A2C122000498C33 /* ActivityAttendance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2732A2C122000498C33 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2742A2C122000498C33 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2752A2C122000498C33 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2762A2C122000498C33 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2772A2C122000498C33 /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2782A2C122000498C33 /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2792A2C122000498C33 /* ClubMembership+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D27A2A2C122000498C33 /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B0DFC7652A2571F900C4BD82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -116,8 +116,8 @@
 		2BA0482829FA276700476352 /* HomesteadClubs */ = {
 			isa = PBXGroup;
 			children = (
+				B096D2702A2C10CA00498C33 /* CoreDataModels */,
 				B0DFC7652A2571F900C4BD82 /* Assets.xcassets */,
-				2BBEDADD29FB7C3E00316CFD /* CoreDataModels */,
 				2BBEDACA29FB766E00316CFD /* ViewModels */,
 				2BBEDAC329FB749B00316CFD /* Views */,
 				2BA0482929FA276700476352 /* HomesteadClubsApp.swift */,
@@ -182,19 +182,19 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		2BBEDADD29FB7C3E00316CFD /* CoreDataModels */ = {
+		B096D2702A2C10CA00498C33 /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				2B2264E22A11B330003AD6BE /* Activity+CoreDataClass.swift */,
-				2B2264E32A11B330003AD6BE /* Activity+CoreDataProperties.swift */,
-				2B2264E42A11B330003AD6BE /* ActivityAttendance+CoreDataClass.swift */,
-				2B2264E52A11B330003AD6BE /* ActivityAttendance+CoreDataProperties.swift */,
-				2B2264E62A11B330003AD6BE /* Contact+CoreDataClass.swift */,
-				2B2264E72A11B330003AD6BE /* Contact+CoreDataProperties.swift */,
-				2B2264E82A11B330003AD6BE /* ClubMembership+CoreDataClass.swift */,
-				2B2264E92A11B330003AD6BE /* ClubMembership+CoreDataProperties.swift */,
-				2B2264EA2A11B330003AD6BE /* Club+CoreDataClass.swift */,
-				2B2264EB2A11B330003AD6BE /* Club+CoreDataProperties.swift */,
+				B096D2712A2C122000498C33 /* ActivityAttendance+CoreDataClass.swift */,
+				B096D2722A2C122000498C33 /* ActivityAttendance+CoreDataProperties.swift */,
+				B096D2732A2C122000498C33 /* Contact+CoreDataClass.swift */,
+				B096D2742A2C122000498C33 /* Contact+CoreDataProperties.swift */,
+				B096D2752A2C122000498C33 /* Activity+CoreDataClass.swift */,
+				B096D2762A2C122000498C33 /* Activity+CoreDataProperties.swift */,
+				B096D2772A2C122000498C33 /* Club+CoreDataClass.swift */,
+				B096D2782A2C122000498C33 /* Club+CoreDataProperties.swift */,
+				B096D2792A2C122000498C33 /* ClubMembership+CoreDataClass.swift */,
+				B096D27A2A2C122000498C33 /* ClubMembership+CoreDataProperties.swift */,
 			);
 			path = CoreDataModels;
 			sourceTree = "<group>";
@@ -272,30 +272,30 @@
 			files = (
 				2B7AB1AD2A242CE500A1C993 /* ContactViewModel.swift in Sources */,
 				2B7AB1A52A198DD700A1C993 /* VolunteerActivitiesView.swift in Sources */,
+				B096D2802A2C122000498C33 /* Activity+CoreDataProperties.swift in Sources */,
+				B096D2822A2C122000498C33 /* Club+CoreDataProperties.swift in Sources */,
 				2BB8E0892A072C4800CB3F2D /* ActivityDetailView.swift in Sources */,
-				2B2264F22A11B330003AD6BE /* ClubMembership+CoreDataClass.swift in Sources */,
-				2B2264ED2A11B330003AD6BE /* Activity+CoreDataProperties.swift in Sources */,
-				2B2264EF2A11B330003AD6BE /* ActivityAttendance+CoreDataProperties.swift in Sources */,
 				2B7AB1B12A242D9900A1C993 /* PersistenceController.swift in Sources */,
 				2BB8E08D2A072C6B00CB3F2D /* ActivityAddView.swift in Sources */,
 				2BB8E03F2A04AC3800CB3F2D /* ActivityListView.swift in Sources */,
 				2BA0482C29FA276700476352 /* ContentView.swift in Sources */,
-				2B2264EE2A11B330003AD6BE /* ActivityAttendance+CoreDataClass.swift in Sources */,
 				2B7AB1AF2A242D6000A1C993 /* ActivityViewModel.swift in Sources */,
+				B096D27D2A2C122000498C33 /* Contact+CoreDataClass.swift in Sources */,
 				2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */,
-				2B2264F52A11B330003AD6BE /* Club+CoreDataProperties.swift in Sources */,
+				B096D27E2A2C122000498C33 /* Contact+CoreDataProperties.swift in Sources */,
+				B096D27C2A2C122000498C33 /* ActivityAttendance+CoreDataProperties.swift in Sources */,
+				B096D27B2A2C122000498C33 /* ActivityAttendance+CoreDataClass.swift in Sources */,
+				B096D2832A2C122000498C33 /* ClubMembership+CoreDataClass.swift in Sources */,
 				2BBEDAC729FB751F00316CFD /* ContactDetailView.swift in Sources */,
-				2B2264F12A11B330003AD6BE /* Contact+CoreDataProperties.swift in Sources */,
+				B096D2842A2C122000498C33 /* ClubMembership+CoreDataProperties.swift in Sources */,
 				2BA0483629FA276800476352 /* HomesteadClubs.xcdatamodeld in Sources */,
 				2BB8E06F2A06055300CB3F2D /* ContactEditView.swift in Sources */,
-				2B2264F42A11B330003AD6BE /* Club+CoreDataClass.swift in Sources */,
-				2B2264EC2A11B330003AD6BE /* Activity+CoreDataClass.swift in Sources */,
+				B096D27F2A2C122000498C33 /* Activity+CoreDataClass.swift in Sources */,
 				2BA0482A29FA276700476352 /* HomesteadClubsApp.swift in Sources */,
 				2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */,
-				2B2264F02A11B330003AD6BE /* Contact+CoreDataClass.swift in Sources */,
 				2B7AB1A72A19938400A1C993 /* VolunteerViewModel.swift in Sources */,
+				B096D2812A2C122000498C33 /* Club+CoreDataClass.swift in Sources */,
 				2B7AB1A92A19981D00A1C993 /* Volunteer.swift in Sources */,
-				2B2264F32A11B330003AD6BE /* ClubMembership+CoreDataProperties.swift in Sources */,
 				2B7AB1AB2A24101C00A1C993 /* MainView.swift in Sources */,
 				2B7AB1A32A198DB900A1C993 /* VolunteerListView.swift in Sources */,
 				2BB8E08B2A072C5B00CB3F2D /* ActivityEditView.swift in Sources */,

@@ -19,7 +19,6 @@ struct ContactListView: View {
                     NavigationLink {
                         ContactDetailView(contactViewModel: contactViewModel, contact: contact)
                     } label: {
-//                        VStack(alignment: .leading) {
                         HStack {
                             Image("contact")
                                 .clipShape(Circle())
@@ -27,6 +26,8 @@ struct ContactListView: View {
                             Text(contact.first_name ?? "")
                                 .fontWeight(.semibold)
                                 .font(.headline)
+                            Text(contact.middle_name ?? "")
+                                .font(.subheadline)
                             Text(contact.last_name ?? "")
                                 .font(.subheadline)
                         }
