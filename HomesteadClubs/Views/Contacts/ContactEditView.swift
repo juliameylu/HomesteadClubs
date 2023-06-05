@@ -84,7 +84,9 @@ struct ContactEditView: View {
                             self.presentationMode.wrappedValue.dismiss()
                         }) {
                             Text("Done")
-                        }) // navigationBarItems, Form
+                        }
+                        .disabled(firstName.isEmpty && lastName.isEmpty)
+                ) // navigationBarItems, Form
             } // VStack
         } // NavigationStack
         // initialize state vars in onAppear because the EnvironmentObject is injected (created) after the view constructor

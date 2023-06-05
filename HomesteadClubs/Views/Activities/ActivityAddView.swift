@@ -42,7 +42,7 @@ struct ActivityAddView: View {
                             .cornerRadius(8)
                     }
                     
-                    Section("Hours") {
+                    Section("Time") {
                         DatePicker("Begin", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
                         
                         DatePicker("End", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
@@ -53,15 +53,13 @@ struct ActivityAddView: View {
                             ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
                                 HStack {
                                     Text(contact.first_name!)
-//                                        .tag(contact as Contact?)
                                     Text(contact.last_name!)
-//                                        .tag(contact as Contact?)
                                 }.tag(contact as Contact?)
                             }
                         }
                         .pickerStyle(.menu)
                         
-                        TextField("Notes", text: $notes)
+                        TextField("Notes", text: $notes, axis: .vertical)
                             .padding(20)
                             .background(Color(.systemGray6))
                             .cornerRadius(8)
@@ -76,7 +74,7 @@ struct ActivityAddView: View {
                     },
                 trailing:
                     Button(action: {
-                        let creditHours = computeCreditHours()
+                        let creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
                         if (creditHours <= 0) {
                             showErrorMessage = true
                         } else {
@@ -102,9 +100,4 @@ struct ActivityAddView: View {
             }
         }
     } // body
-    
-    func computeCreditHours() -> Int16 {
-        let deltaTimeInterval = beginDateTime.distance(to: endDateTime)
-        return Int16(deltaTimeInterval / 3600)
-    }
 }

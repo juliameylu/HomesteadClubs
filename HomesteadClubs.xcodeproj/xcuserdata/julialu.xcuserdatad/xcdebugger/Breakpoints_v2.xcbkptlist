@@ -7,70 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BBD76B40-B5FB-40E9-832D-ECD3480E4A3E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomesteadClubs/Views/Activities/ActivityAddView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "ActivityAddView"
-            landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "BBD76B40-B5FB-40E9-832D-ECD3480E4A3E - 74ee53dd64a14c20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomesteadClubs.ActivityAddView.computeCreditHours() -&gt; ()"
-                  moduleName = "HomesteadClubs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityAddView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "BBD76B40-B5FB-40E9-832D-ECD3480E4A3E - 1c80f4fd0bb74528"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomesteadClubs.ActivityAddView.computeCreditHours() -&gt; Swift.Int16"
-                  moduleName = "HomesteadClubs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityAddView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "155">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1CF0FA42-FFF1-47CB-B523-A22ED9FBD7AD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomesteadClubs/Views/Activities/ActivityAddView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "computeCreditHours()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0EAFCE1B-DCE6-4CF4-8740-FA08A86B74E4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -78,8 +14,8 @@
             filePath = "HomesteadClubs/Views/Activities/ActivityAddView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -114,6 +50,85 @@
                   offsetFromSymbolStart = "379">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADF6A2D8-C048-4BFC-9784-BB330EC8FADE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/Views/Activities/ActivityListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "deleteActivity(at:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ADF6A2D8-C048-4BFC-9784-BB330EC8FADE - 47789d57805ae97f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarItems&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(trailing: &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in HomesteadClubs.ActivityListView.body.getter : some"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "ADF6A2D8-C048-4BFC-9784-BB330EC8FADE - bc6fa042a33419d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; SwiftUI.Image in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarItems&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(trailing: &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in HomesteadClubs.ActivityListView.body.getter : some"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "ADF6A2D8-C048-4BFC-9784-BB330EC8FADE - 657ac39df7028edf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityListView.deleteActivity(at: Foundation.IndexSet) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EB0CA16-BD11-46E2-BD69-B139B2A37A6F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/Views/Activities/ActivityListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "deleteActivity(at:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

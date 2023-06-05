@@ -74,10 +74,10 @@ struct ContactAddView: View {
                             contactViewModel.addContact(firstName: firstName, middleName: middleName, lastName: lastName, email: email, phone: phone)
                             self.readyToNavigate = true
                             self.presentationMode.wrappedValue.dismiss()
-                        } // action
-                              ) {
-                                  Text("Done")
-                              } // Button
+                        }) {
+                                Text("Done")
+                        } // Button
+                        .disabled(firstName.isEmpty && lastName.isEmpty)
                 ) // navigationBarItems, Form
             } // VStack
         } // NavigationStack

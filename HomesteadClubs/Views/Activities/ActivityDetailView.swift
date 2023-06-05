@@ -67,7 +67,7 @@ struct ActivityDetailView: View {
                     VStack {
                         Text(activity.notes ?? "")
                             .lineLimit(nil)
-                    }.frame(maxWidth: .infinity)
+                    }.frame(maxWidth: .infinity, alignment: .leading)
                 }
             } // Notes
         } // Form

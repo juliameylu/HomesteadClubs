@@ -97,6 +97,7 @@ class ActivityViewModel: ObservableObject {
     }
     
     func delete(activity: Activity) {
+        viewContext.del
         viewContext.delete(activity)
         do {
             try viewContext.save()
@@ -108,5 +109,11 @@ class ActivityViewModel: ObservableObject {
     func saveAndReinitialize() {
         save()
         fetchActivities()
+    }
+    
+    func computeCreditHours(beginDateTime: Date, endDateTime: Date) -> Int16 {
+        let deltaTimeInterval = beginDateTime.distance(to: endDateTime)
+        let deltaHours = (deltaTimeInterval / 3600).truncatingRemainder(dividingBy: 3600)
+        return Int16(deltaHours)
     }
 }

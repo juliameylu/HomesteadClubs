@@ -15,7 +15,7 @@ struct ActivityListView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            List {
                 ForEach(activityViewModel.activities, id: \.id) { activity in
                     NavigationLink {
                         ActivityDetailView(activity: activity)
@@ -48,22 +48,12 @@ struct ActivityListView: View {
                         .padding(.horizontal)
                         .padding(.bottom)
                     } // label
-                    .contextMenu {
-                        Button(role: .destructive, action: {
-                            activityViewModel.delete(activity: activity)
-                            activityViewModel.fetchActivities()
-                        }) {
-                            Text("Delete")
-                        } // Button
-                    } // contextMenu
                 } // ForEach
-                //                .onDelete(perform: deleteActivity)
-            } // ScrollView
+                .onDelete(perform: deleteActivity)
+            } // List
             .navigationTitle("All Activites")
             .sheet(isPresented: $showActivityAddView) {
-                ActivityAddView(
-//                    activityViewModel: activityViewModel, contactViewModel: contactViewModel
-                )
+                ActivityAddView()
             }
             .navigationBarItems(trailing:
                                     Button (action: {
@@ -74,4 +64,12 @@ struct ActivityListView: View {
             )
         } // NavigationStack
     } // body
+    
+    func deleteActivity(at offsets: IndexSet) {
+        for index in offsets {
+            let activity = activityViewModel.activities[index]
+            activityViewModel.delete(activity: activity)
+            activityViewModel.fetchActivities()
+        }
+    }
 }

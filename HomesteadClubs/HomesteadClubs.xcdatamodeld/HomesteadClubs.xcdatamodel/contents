@@ -11,7 +11,7 @@
         <attribute name="state" optional="YES" attributeType="String"/>
         <attribute name="streetAddress" optional="YES" attributeType="String"/>
         <attribute name="zip" optional="YES" attributeType="String"/>
-        <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivityAttendance" inverseName="attending" inverseEntity="ActivityAttendance"/>
+        <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ActivityAttendance" inverseName="attending" inverseEntity="ActivityAttendance"/>
         <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact"/>
     </entity>
     <entity name="ActivityAttendance" representedClassName=".ActivityAttendance" syncable="YES">

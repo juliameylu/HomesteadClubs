@@ -20,6 +20,8 @@ struct ActivityEditView: View {
     @State var creditHours: Int16
     @State var sponsor: Contact?
     
+    @State var readyToNavigate = false
+    
     var activity: Activity
     
     init(activity: Activity) {
@@ -34,45 +36,67 @@ struct ActivityEditView: View {
         _sponsor = State(initialValue: activity.sponsor)
     }
     
-    @State var readyToNavigate = false
-
     var body: some View {
-
         NavigationStack {
-            VStack (spacing: 20) {
-                Text("Edit Activity")
-                    .font(.headline)
+            VStack {
+                HStack {
+                    Image("park")
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                    
+                    Text("Edit Activity")
+                        .font(.headline)
+                }
                 
-                Image("park")
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                
-                TextField("Name", text: $name)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                TextField("Notes", text: $notes)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                DatePicker("Start Date Time", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
-                
-                DatePicker("Finish Date Time", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
-                
-                TextField("Credit Hours", value: $creditHours, format: .number)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                Picker("Sponsor", selection: $sponsor) {
-                    ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
-                        Text(contact.first_name!)
-                            .tag(contact as Contact?)
+                Form {
+                    Section("Title") {
+                        TextField("Name", text: $name)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
                     }
-                } // Picker
+                    
+                    Section("Time") {
+                        DatePicker("Begin", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
+                        
+                        DatePicker("End", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
+                        
+                        HStack {
+                            Text("Hours:")
+                            TextField("Credit Hours", value: $creditHours, format: .number)
+                                .textFieldStyle(.roundedBorder)
+                                .padding(5)
+                                .background(Color(.systemGray6))
+                                .cornerRadius(8)
+                        }
+                    }
+                    
+                    Section("Other") {
+                        Picker("Sponsor", selection: $sponsor) {
+                            ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
+                                HStack {
+                                    Text(contact.first_name!)
+                                    //                                        .tag(contact as Contact?)
+                                    Text(contact.last_name!)
+                                }.tag(contact as Contact?)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                        
+                        TextField("Notes", text: $notes, axis: .vertical)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    } // Section
+                    
+                    
+                    //                Picker("Sponsor", selection: $sponsor) {
+                    //                    ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
+                    //                        Text(contact.first_name!)
+                    //                            .tag(contact as Contact?)
+                    //                    }
+                    //                } // Picker
+                } // Form
             } // VStack
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(
@@ -86,7 +110,7 @@ struct ActivityEditView: View {
                         activity.notes = notes
                         activity.beginDateTime = beginDateTime
                         activity.endDateTime = endDateTime
-                        activity.creditHours = Int16((beginDateTime.distance(to: endDateTime) / 3600).truncatingRemainder(dividingBy: 3600))
+                        activity.creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
                         activity.sponsor = sponsor
                     
                         activityViewModel.editActivity(activity: activity)
@@ -95,6 +119,7 @@ struct ActivityEditView: View {
                     }) {
                         Text("Done")
                     } // Button
+                    .disabled(name.isEmpty)
             ) // navigationBarItems
        } // NavigationStack
     } // body

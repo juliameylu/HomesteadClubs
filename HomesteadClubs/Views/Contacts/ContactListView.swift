@@ -14,7 +14,7 @@ struct ContactListView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            List {
                 ForEach(contactViewModel.contacts, id: \.id) { contact in
                     NavigationLink {
                         ContactDetailView(contact: contact)
@@ -37,18 +37,11 @@ struct ContactListView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                         .padding(.bottom)
-                    }
-                    .contextMenu {
-                        Button(role: .destructive, action: {
-                            contactViewModel.delete(contact: contact)
-                            contactViewModel.fetchContacts()
-                        }) {
-                            Text("Delete")
-                        }
-                    }
-                }
-            }
-            .navigationTitle("My Contacts")
+                    } // label, ForEach
+                } // ForEach
+                .onDelete(perform: deleteContacts)
+            } // List
+            .navigationTitle("Club Contacts")
             .sheet(isPresented: $showNewContactView) {
                 ContactAddView()
             }
@@ -58,7 +51,15 @@ struct ContactListView: View {
             }) {
                 Image(systemName: "plus")
             }
-            )
+            ) // navigationBarItems, List
         } // NavigationStack
+    }
+    
+    func deleteContacts(at offsets: IndexSet) {
+        for index in offsets {
+            let contact = contactViewModel.contacts[index]
+            contactViewModel.delete(contact: contact)
+            contactViewModel.fetchContacts()
+        }
     }
 }

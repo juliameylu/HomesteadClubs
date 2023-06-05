@@ -15,55 +15,52 @@ struct AttendeeListView: View {
     @State var showNewAttendeeView: Bool = false
     
     var body: some View {
-//        NavigationStack {
-            List {
-                ForEach(activity.attendanceArray, id: \.id) { attendance in
-                    NavigationLink {
-                        ContactDetailView(contact: attendance.attendedBy!)
-                    } label: {
-                        HStack {
-                            Image("attendee")
-                                .clipShape(Circle())
-                                .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                            
-                            Text(attendance.attendedBy!.first_name ?? "")
-                                .fontWeight(.semibold)
-                                .font(.headline)
-                            
-                            Text(attendance.attendedBy!.middle_name ?? "")
-                                .font(.subheadline)
-                            
-                            Text(attendance.attendedBy!.last_name ?? "")
-                                .font(.subheadline)
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal)
-                        .padding(.bottom)
-                    } // NavigationLink
-                } // ForEach
-                .onDelete(perform: removeAttendance)
-            } // List
-            .navigationTitle("Current Attendees")
-//            .sheet(isPresented: $showNewAttendeeView) {
-//                AttendeeAddView(activity: activity)
-//            }
-            .navigationBarItems(trailing:
-                Button (action: {
-                    showNewAttendeeView.toggle()
-                }) {
-                    Image(systemName: "plus")
-                } // Button
-            )
-            .navigationDestination(
-                isPresented: $showNewAttendeeView, destination: {
-                    AttendeeAddView(activity: activity)
-                }
-            )
-
-//        } // NavigationStack
+        List {
+            ForEach(activity.attendanceArray, id: \.id) { attendance in
+                NavigationLink {
+                    ContactDetailView(contact: attendance.attendedBy!)
+                } label: {
+                    HStack {
+                        Image("attendee")
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                        
+                        Text(attendance.attendedBy!.first_name ?? "")
+                            .fontWeight(.semibold)
+                            .font(.headline)
+                        
+                        Text(attendance.attendedBy!.middle_name ?? "")
+                            .font(.subheadline)
+                        
+                        Text(attendance.attendedBy!.last_name ?? "")
+                            .font(.subheadline)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+                    .padding(.bottom)
+                } // NavigationLink
+            } // ForEach
+            .onDelete(perform: deleteAttendance)
+        } // List
+        .navigationTitle("Current Attendees")
+        //            .sheet(isPresented: $showNewAttendeeView) {
+        //                AttendeeAddView(activity: activity)
+        //            }
+        .navigationBarItems(trailing:
+                                Button (action: {
+            showNewAttendeeView.toggle()
+        }) {
+            Image(systemName: "plus")
+        } // Button
+        )
+        .navigationDestination(
+            isPresented: $showNewAttendeeView, destination: {
+                AttendeeAddView(activity: activity)
+            }
+        )
     }
     
-    func removeAttendance(at offsets: IndexSet) {
+    func deleteAttendance(at offsets: IndexSet) {
         for index in offsets {
             let attendance = activity.attendanceArray[index]
             activityViewModel.removeAttendance(attendance: attendance)
