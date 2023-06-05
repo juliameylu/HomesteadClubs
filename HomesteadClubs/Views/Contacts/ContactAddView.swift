@@ -33,7 +33,6 @@ struct ContactAddView: View {
                 
                 Form {
                     Section("Name") {
-                        
                         TextField("First Name", text: $firstName)
                             .padding(20)
                             .background(Color(.systemGray6))

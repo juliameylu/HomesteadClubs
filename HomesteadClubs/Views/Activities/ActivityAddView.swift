@@ -8,70 +8,65 @@
 import SwiftUI
 
 struct ActivityAddView: View {
-    @ObservedObject var activityViewModel: ActivityViewModel
-    @ObservedObject var contactViewModel: ContactViewModel
-
+    @EnvironmentObject var activityViewModel: ActivityViewModel
+    @EnvironmentObject var contactViewModel: ContactViewModel
+    
     @Environment (\.presentationMode) var presentationMode
-
+    
     @State var name: String = ""
     @State var notes: String = ""
     @State var beginDateTime: Date = Date.now
-    @State var endDateTime: Date = Date.now
-    @State var creditHours: Int16 = 0
+    @State var endDateTime: Date = Date.now.addingTimeInterval(60 * 60)
     @State var sponsor: Contact?
-
+    @State var showErrorMessage = false
+    
     @State var readyToNavigate = false
     
-    var contacts: [Contact]
-    
-    init(activityViewModel: ActivityViewModel, contactViewModel: ContactViewModel) {
-        self.activityViewModel = activityViewModel
-        self.contactViewModel = contactViewModel
-        
-        self.contacts = contactViewModel.contacts
-        
-        if !contacts.isEmpty {
-            self._sponsor = State(initialValue: contacts[0])
-        }
-    }
-
     var body: some View {
         NavigationStack {
-            VStack (spacing: 20) {
-                Text("Add New Activity")
-                    .font(.headline)
-                
-                Image("park")
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                
-                TextField("Name", text: $name)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                TextField("Notes", text: $notes)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                DatePicker("Start Date Time", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
-                
-                DatePicker("Finish Date Time", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
-                
-                TextField("Credit Hours", value: $creditHours, format: .number)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                Picker("Sponsor", selection: $sponsor) {
-                    ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
-                        Text(contact.first_name!)
-                            .tag(contact as Contact?)
-                    }
+            VStack {
+                HStack {
+                    Image("park")
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                    
+                    Text("Add Activity")
+                        .font(.headline)
                 }
-                .pickerStyle(.menu)
+                
+                Form {
+                    Section("Title") {
+                        TextField("Name", text: $name)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    }
+                    
+                    Section("Hours") {
+                        DatePicker("Begin", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
+                        
+                        DatePicker("End", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
+                    }
+                    
+                    Section("Other") {
+                        Picker("Sponsor", selection: $sponsor) {
+                            ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
+                                HStack {
+                                    Text(contact.first_name!)
+//                                        .tag(contact as Contact?)
+                                    Text(contact.last_name!)
+//                                        .tag(contact as Contact?)
+                                }.tag(contact as Contact?)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                        
+                        TextField("Notes", text: $notes)
+                            .padding(20)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    } // Section
+                } // Form
             } // VStack
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(
@@ -81,13 +76,35 @@ struct ActivityAddView: View {
                     },
                 trailing:
                     Button(action: {
-                        activityViewModel.addActivity(name: name, notes: notes, beginDateTime: beginDateTime, endDateTime: endDateTime, creditHours: creditHours, sponsor: sponsor!)
-                        self.readyToNavigate = true
-                        self.presentationMode.wrappedValue.dismiss()
+                        let creditHours = computeCreditHours()
+                        if (creditHours <= 0) {
+                            showErrorMessage = true
+                        } else {
+                            activityViewModel.addActivity(name: name, notes: notes, beginDateTime: beginDateTime, endDateTime: endDateTime, creditHours: creditHours, sponsor: sponsor!)
+                            self.readyToNavigate = true
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
                     }) {
-                        Text("Add")
+                        Text("Done")
                     }
+                    .disabled(name.isEmpty)
             ) // navigationBarItems
+            .alert(isPresented: $showErrorMessage) { () -> Alert in
+                Alert(title: Text("Check Dates"), message: Text("End Date should come after Begin Date"),
+                      dismissButton: .default(Text("OK")))
+            }
         } // NavigationStack
+        // initialize state vars in onAppear because the EnvironmentObject is injected (created) after the view constructor
+        .onAppear {
+            let contacts = contactViewModel.contacts
+            if !contacts.isEmpty {
+                self.sponsor = contacts[0]
+            }
+        }
     } // body
+    
+    func computeCreditHours() -> Int16 {
+        let deltaTimeInterval = beginDateTime.distance(to: endDateTime)
+        return Int16(deltaTimeInterval / 3600)
+    }
 }

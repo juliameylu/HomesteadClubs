@@ -11,8 +11,8 @@ struct ActivityDetailView: View {
     @EnvironmentObject var activityViewModel: ActivityViewModel
     @EnvironmentObject var contactViewModel: ContactViewModel
     
-    @State private var isShowEditView = false
     @State private var isShowAttendeesView = false
+    @State private var isShowEditView = false
     
     var activity: Activity
     

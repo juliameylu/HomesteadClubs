@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContactDetailView: View {
     @EnvironmentObject var contactViewModel: ContactViewModel
-    
-    var contact: Contact
-    
+
     @State private var isPresentingEditView = false
  
+    var contact: Contact
+    
     var body: some View {
         NavigationStack {
             Form {

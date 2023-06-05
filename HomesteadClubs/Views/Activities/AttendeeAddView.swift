@@ -11,9 +11,9 @@ struct AttendeeAddView: View {
     @EnvironmentObject var activityViewModel : ActivityViewModel
     @EnvironmentObject var contactViewModel: ContactViewModel
     
-    var activity: Activity
-    
     @State private var selections = Set<Contact>()
+    
+    var activity: Activity
     
     var body: some View {
         List(activityViewModel.fetchNonMembers(contacts: contactViewModel.contacts, attendances: activity.attendanceArray), id: \.self, selection: $selections) { (contact: Contact) in

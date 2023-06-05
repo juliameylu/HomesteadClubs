@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9EB94E1F-D3C6-4FC5-89E8-E4905F464B1A"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BBD76B40-B5FB-40E9-832D-ECD3480E4A3E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/Views/Activities/ActivityAddView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "ActivityAddView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "BBD76B40-B5FB-40E9-832D-ECD3480E4A3E - 74ee53dd64a14c20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityAddView.computeCreditHours() -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityAddView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "BBD76B40-B5FB-40E9-832D-ECD3480E4A3E - 1c80f4fd0bb74528"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityAddView.computeCreditHours() -&gt; Swift.Int16"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityAddView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "155">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CF0FA42-FFF1-47CB-B523-A22ED9FBD7AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/Views/Activities/ActivityAddView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "computeCreditHours()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EAFCE1B-DCE6-4CF4-8740-FA08A86B74E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/Views/Activities/ActivityAddView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0EAFCE1B-DCE6-4CF4-8740-FA08A86B74E4 - f5f569cca6edf5f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0 in HomesteadClubs.ActivityAddView.body.getter : some"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityAddView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1010">
+               </Location>
+               <Location
+                  uuid = "0EAFCE1B-DCE6-4CF4-8740-FA08A86B74E4 - f5f569cca6edf5f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0 in HomesteadClubs.ActivityAddView.body.getter : some"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/Views/Activities/ActivityAddView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "379">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -61,7 +61,9 @@ struct ActivityListView: View {
             } // ScrollView
             .navigationTitle("All Activites")
             .sheet(isPresented: $showActivityAddView) {
-                ActivityAddView(activityViewModel: activityViewModel, contactViewModel: contactViewModel)
+                ActivityAddView(
+//                    activityViewModel: activityViewModel, contactViewModel: contactViewModel
+                )
             }
             .navigationBarItems(trailing:
                                     Button (action: {
@@ -73,4 +75,3 @@ struct ActivityListView: View {
         } // NavigationStack
     } // body
 }
-
