@@ -21,7 +21,7 @@ struct AttendeeListView: View {
                     ContactDetailView(contact: attendance.attendedBy!)
                 } label: {
                     HStack {
-                        Image("attendee")
+                        Image("contact")
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.gray, lineWidth: 2))
                         

@@ -37,7 +37,7 @@ struct ContactListView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                         .padding(.bottom)
-                    } // label, ForEach
+                    } // label, NavigationLink
                 } // ForEach
                 .onDelete(perform: deleteContacts)
             } // List

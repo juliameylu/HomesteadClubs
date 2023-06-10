@@ -15,16 +15,38 @@ struct VolunteerActivitiesView: View {
     @State private var isPresentingEditView = false
  
     var body: some View {
-            ScrollView {
+            List {
                 ForEach(volunteer.activities, id: \.id) { activity in
                     VStack(alignment: .leading) {
-                        Text(activity.name ?? "")
-                            .fontWeight(.semibold)
-                            .font(.headline)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal)
-                    .padding(.bottom)
+                        HStack {
+                            Image("park")
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+
+                            Text(activity.name ?? "")
+                                .fontWeight(.semibold)
+                                .font(.headline)
+                        } // HStack
+                        
+                        Grid(alignment: .leadingFirstTextBaseline) {
+                            GridRow {
+                                Text("From:")
+                                Text(activity.beginDateTime ?? Date.now, style: .date)
+                                Text(activity.beginDateTime ?? Date.now, style: .time)
+                            }
+                            
+                            GridRow {
+                                Text("To:")
+                                Text(activity.endDateTime ?? Date.now, style: .date)
+                                Text(activity.endDateTime ?? Date.now, style: .time)
+                            }
+                            
+                            GridRow {
+                                Text("Hours:")
+                                Text(String(activity.creditHours))
+                            }
+                        } // Grid
+                    } // VStack
                 } // ForEach
             }
             .navigationTitle("Activities")

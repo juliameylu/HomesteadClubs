@@ -29,7 +29,7 @@ struct ActivityListView: View {
                                 Text(activity.name ?? "")
                                     .fontWeight(.semibold)
                                     .font(.headline)
-                            }
+                            } // HStack
                             
                             Grid(alignment: .leadingFirstTextBaseline) {
                                 GridRow {
@@ -42,12 +42,12 @@ struct ActivityListView: View {
                                     Text(activity.endDateTime ?? Date.now, style: .date)
                                     Text(activity.endDateTime ?? Date.now, style: .time)
                                 }
-                            }
-                        }
+                            } // Grid
+                        } // VStack
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
-                        .padding(.bottom)
-                    } // label
+                        .padding(.bottom) // VStack
+                    } // label, NavigationLink
                 } // ForEach
                 .onDelete(perform: deleteActivity)
             } // List

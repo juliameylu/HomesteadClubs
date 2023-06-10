@@ -12,7 +12,7 @@
         <attribute name="streetAddress" optional="YES" attributeType="String"/>
         <attribute name="zip" optional="YES" attributeType="String"/>
         <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ActivityAttendance" inverseName="attending" inverseEntity="ActivityAttendance"/>
-        <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact"/>
+        <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="sponsor" inverseEntity="Contact"/>
     </entity>
     <entity name="ActivityAttendance" representedClassName=".ActivityAttendance" syncable="YES">
         <relationship name="attendedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="attending" inverseEntity="Contact"/>
@@ -21,7 +21,7 @@
     <entity name="Club" representedClassName=".Club" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClubMembership" inverseName="club" inverseEntity="ClubMembership"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ClubMembership" inverseName="club" inverseEntity="ClubMembership"/>
     </entity>
     <entity name="ClubMembership" representedClassName=".ClubMembership" syncable="YES">
         <attribute name="joinDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -37,7 +37,8 @@
         <attribute name="last_name" optional="YES" attributeType="String"/>
         <attribute name="middle_name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
-        <relationship name="attending" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivityAttendance" inverseName="attendedBy" inverseEntity="ActivityAttendance"/>
-        <relationship name="membership" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClubMembership" inverseName="member" inverseEntity="ClubMembership"/>
+        <relationship name="attending" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ActivityAttendance" inverseName="attendedBy" inverseEntity="ActivityAttendance"/>
+        <relationship name="membership" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ClubMembership" inverseName="member" inverseEntity="ClubMembership"/>
+        <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="sponsor" inverseEntity="Activity"/>
     </entity>
 </model>

@@ -28,7 +28,7 @@ class ActivityViewModel: ObservableObject {
             
             let now = NSDate.now
             // TODO: Fix optional
-            upcomingActivities = activities.filter{ $0.beginDateTime! >= now }.sorted{ $0.beginDateTime! < $1.beginDateTime! }
+            upcomingActivities = activities.filter{ $0.endDateTime! >= now }.sorted{ $0.beginDateTime! < $1.beginDateTime! }
             
         } catch {
             print("DEBUG: Some error occured while fetching")
@@ -97,7 +97,6 @@ class ActivityViewModel: ObservableObject {
     }
     
     func delete(activity: Activity) {
-        viewContext.del
         viewContext.delete(activity)
         do {
             try viewContext.save()

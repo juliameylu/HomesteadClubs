@@ -2,7 +2,7 @@
 //  Contact+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/3/23.
+//  Created by Julia Lu on 6/10/23.
 //
 //
 
@@ -11,11 +11,11 @@ import CoreData
 
 
 extension Contact {
-
+    
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Contact> {
         return NSFetchRequest<Contact>(entityName: "Contact")
     }
-
+    
     @NSManaged public var email: String?
     @NSManaged public var first_name: String?
     @NSManaged public var id: UUID?
@@ -24,6 +24,7 @@ extension Contact {
     @NSManaged public var phone: String?
     @NSManaged public var attending: NSSet?
     @NSManaged public var membership: NSSet?
+    @NSManaged public var sponsor: Activity?
     
     public var membershipArray: [ActivityAttendance] {
         let attendanceSet = attending as? Set<ActivityAttendance> ?? []
@@ -33,6 +34,7 @@ extension Contact {
         }
     }
 }
+
 
 // MARK: Generated accessors for attending
 extension Contact {
