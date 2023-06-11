@@ -15,6 +15,7 @@ struct ContactAddView: View {
     @State var firstName: String = ""
     @State var lastName: String = ""
     @State var middleName: String = ""
+    @State var isMember = true
     @State var email: String = ""
     @State var phone: String = ""
     
@@ -49,19 +50,22 @@ struct ContactAddView: View {
                             .cornerRadius(8)
                     } // Section Name
                     
-                    Section("Email") {
+                    Section("Membership") {
+                        Toggle(isOn: $isMember) {
+                            Text("Club Member")
+                        }
+                    }
+                    
+                    Section("Contact Info") {
                         TextField("Email", text: $email)
                             .padding(20)
                             .background(Color(.systemGray6))
                             .cornerRadius(8)
-                    }
-                    
-                    Section("Phone") {
                         TextField("Phone", text: $phone)
                             .padding(20)
                             .background(Color(.systemGray6))
                             .cornerRadius(8)
-                    }
+                    } // Section Contact Info
                 } // Form
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(
@@ -71,13 +75,13 @@ struct ContactAddView: View {
                         }, // Button
                     trailing:
                         Button(action: {
-                            contactViewModel.addContact(firstName: firstName, middleName: middleName, lastName: lastName, email: email, phone: phone)
+                            contactViewModel.addContact(firstName: firstName, middleName: middleName, lastName: lastName, isMember: isMember, email: email, phone: phone)
                             self.readyToNavigate = true
                             self.presentationMode.wrappedValue.dismiss()
                         }) {
                                 Text("Done")
                         } // Button
-                        .disabled(firstName.isEmpty && lastName.isEmpty)
+                        .disabled(firstName.isEmpty || lastName.isEmpty)
                 ) // navigationBarItems, Form
             } // VStack
         } // NavigationStack

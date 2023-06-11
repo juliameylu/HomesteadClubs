@@ -11,17 +11,18 @@ import CoreData
 
 
 extension Contact {
-    
+
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Contact> {
         return NSFetchRequest<Contact>(entityName: "Contact")
     }
-    
+
     @NSManaged public var email: String?
     @NSManaged public var first_name: String?
     @NSManaged public var id: UUID?
     @NSManaged public var last_name: String?
     @NSManaged public var middle_name: String?
     @NSManaged public var phone: String?
+    @NSManaged public var isMember: Bool
     @NSManaged public var attending: NSSet?
     @NSManaged public var membership: NSSet?
     @NSManaged public var sponsor: Activity?
@@ -34,7 +35,6 @@ extension Contact {
         }
     }
 }
-
 
 // MARK: Generated accessors for attending
 extension Contact {

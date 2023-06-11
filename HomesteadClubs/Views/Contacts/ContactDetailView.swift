@@ -11,13 +11,20 @@ struct ContactDetailView: View {
     @EnvironmentObject var contactViewModel: ContactViewModel
 
     @State private var isPresentingEditView = false
+    @State private var isMember = true
  
     var contact: Contact
+    
+    init(contact: Contact) {
+        self.contact = contact
+        
+        _isMember = State(initialValue: contact.isMember)
+    }
     
     var body: some View {
         NavigationStack {
             Form {
-                Section(header: Text("Name")) {
+                Section("Name") {
                     HStack {
                         Image("contact")
                             .clipShape(Circle())
@@ -27,9 +34,11 @@ struct ContactDetailView: View {
                             .font(.custom("Roboto-Bold", size: 20))
                             .foregroundColor(Color.black)
                         
-                        Text(contact.middle_name ?? "")
-                            .font(.custom("Roboto-Bold", size: 20))
-                            .foregroundColor(Color.black)
+                        if let middleName = contact.middle_name {
+                            Text(middleName)
+                                .font(.custom("Roboto-Bold", size: 20))
+                                .foregroundColor(Color.black)
+                        }
                         
                         Text(contact.last_name ?? "")
                             .font(.custom("Roboto-Bold", size: 20))
@@ -37,13 +46,17 @@ struct ContactDetailView: View {
                     } // VStack
                 } // Section
                 
-                Section(header: Text("Email")) {
+                Section("Membership") {
+                    Toggle(isOn: $isMember) {
+                        Text("Club Member")
+                    }.disabled(true)
+                }
+                
+                Section("Contact Info") {
                     Text(contact.email ?? "")
                         .font(.custom("Roboto-Bold", size: 20))
                         .foregroundColor(Color.black)
-                } // Section
-                
-                Section(header: Text("Phone")) {
+
                     Text(contact.phone ?? "")
                         .font(.custom("Roboto-Bold", size: 20))
                         .foregroundColor(Color.black)

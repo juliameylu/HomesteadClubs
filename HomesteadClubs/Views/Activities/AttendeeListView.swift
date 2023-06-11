@@ -27,8 +27,10 @@ struct AttendeeListView: View {
                         
                         Text(attendance.attendedBy!.first_name ?? "")
                         
-                        Text(attendance.attendedBy!.middle_name ?? "")
-                        
+                        if let middleName = attendance.attendedBy!.middle_name {
+                            Text(middleName)
+                        }
+
                         Text(attendance.attendedBy!.last_name ?? "")
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)

@@ -21,17 +21,22 @@ class ContactViewModel: ObservableObject {
 
         do {
             contacts = try viewContext.fetch(request)
+            contacts = contacts.sorted{ $0.first_name ?? "" <= $1.first_name ?? ""
+                || $0.last_name ?? "" <= $1.last_name ?? ""
+            }
         } catch {
             print("DEBUG: Some error occured while fetching")
         }
     }
 
-    func addContact(firstName: String, middleName: String, lastName: String, email: String, phone: String) {
+    func addContact(firstName: String, middleName: String, lastName: String,
+                    isMember: Bool, email: String, phone: String) {
         let contact = Contact(context: viewContext)
         
         contact.id = UUID()
         contact.first_name = firstName
         contact.middle_name = middleName
+        contact.isMember = isMember
         contact.last_name = lastName
         contact.email = email
         contact.phone = phone

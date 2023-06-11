@@ -32,7 +32,8 @@ extension Activity {
     public var attendanceArray: [ActivityAttendance] {
         let attendanceSet = attendances as? Set<ActivityAttendance> ?? []
         
-        return attendanceSet.sorted {
+        return attendanceSet
+            .sorted {
             $0.attendedBy!.first_name! > $1.attendedBy!.first_name!
         }
     }

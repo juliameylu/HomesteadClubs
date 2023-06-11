@@ -28,11 +28,20 @@ class VolunteerViewModel: ObservableObject {
                     let activity = $0
                     activity.attendanceArray.forEach {
                         let attendance = $0
-                        volunteerDict[attendance.attendedBy!, default: []].append($0.attending!)
-                    } // forEach
-                } // forEach
+                        
+                        if let attendee = attendance.attendedBy, let attending = attendance.attending {
+                            if (attendee.isMember) {
+                                volunteerDict[attendee, default: []].append(attending)
+                            }
+                        }
+                    } // forEach attendanceArray
+                } // forEach activities
                 
-                volunteers = volunteerDict.map{ Volunteer(contact: $0, activities: $1) }
+                volunteers = volunteerDict
+                    .map{ Volunteer(contact: $0, activities: $1) }
+                    .sorted{
+                        $0.contact.first_name ?? "" <=  $1.contact.first_name ?? ""
+                        || $0.contact.last_name ?? "" <= $1.contact.last_name ?? ""}
             } catch {
                 print("DEBUG: Some error occured while fetching")
             }

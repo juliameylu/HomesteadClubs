@@ -20,7 +20,9 @@ struct AttendeeAddView: View {
             HStack {
                 Text(contact.first_name ?? "")
 
-                Text(contact.middle_name ?? "")
+                if let middlenName = contact.middle_name {
+                    Text(middlenName)
+                }
 
                 Text(contact.last_name ?? "")
             } // HStack

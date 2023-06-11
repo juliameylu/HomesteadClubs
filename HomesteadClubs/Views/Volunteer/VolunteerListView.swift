@@ -24,8 +24,13 @@ struct VolunteerListView: View {
                                 Image("contact")
                                     .clipShape(Circle())
                                     .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                                
                                 Text(volunteer.contact.first_name ?? "")
-                                Text(volunteer.contact.middle_name ?? "")
+                                
+                                if let middleName = volunteer.contact.middle_name {
+                                    Text(middleName)
+                                }
+                                
                                 Text(volunteer.contact.last_name ?? "")
                             } //
                             
@@ -41,16 +46,6 @@ struct VolunteerListView: View {
                 } // ForEach
             } // List
             .navigationTitle("Volunteer Hours")
-            //            .sheet(isPresented: $showNewVolunteerView) {
-            //                VolunteerAddView(contactViewModel: contactViewModel)
-            //            }
-            //            .navigationBarItems(trailing:
-            //                Button (action: {
-            //                    showNewVolunteerView.toggle()
-            //                }) {
-            //                    Image(systemName: "plus")
-            //                }
-            //            )
         } // NavigationStack
         .onAppear {
             volunteerViewModel.fetchVolunteers()

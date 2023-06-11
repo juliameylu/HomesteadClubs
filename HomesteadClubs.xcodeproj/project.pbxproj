@@ -30,16 +30,16 @@
 		2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC629FB751F00316CFD /* ContactListView.swift */; };
 		B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2852A2D1EA200498C33 /* AttendeeListView.swift */; };
 		B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2872A2D231600498C33 /* AttendeeAddView.swift */; };
-		B096D2BB2A3529B000498C33 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B12A3529B000498C33 /* Activity+CoreDataClass.swift */; };
-		B096D2BC2A3529B000498C33 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B22A3529B000498C33 /* Activity+CoreDataProperties.swift */; };
-		B096D2BD2A3529B000498C33 /* ClubMembership+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B32A3529B000498C33 /* ClubMembership+CoreDataClass.swift */; };
-		B096D2BE2A3529B000498C33 /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B42A3529B000498C33 /* ClubMembership+CoreDataProperties.swift */; };
-		B096D2BF2A3529B000498C33 /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B52A3529B000498C33 /* Club+CoreDataClass.swift */; };
-		B096D2C02A3529B000498C33 /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B62A3529B000498C33 /* Club+CoreDataProperties.swift */; };
-		B096D2C12A3529B000498C33 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B72A3529B000498C33 /* Contact+CoreDataClass.swift */; };
-		B096D2C22A3529B000498C33 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B82A3529B000498C33 /* Contact+CoreDataProperties.swift */; };
-		B096D2C32A3529B000498C33 /* ActivityAttendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2B92A3529B000498C33 /* ActivityAttendance+CoreDataClass.swift */; };
-		B096D2C42A3529B000498C33 /* ActivityAttendance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2BA2A3529B000498C33 /* ActivityAttendance+CoreDataProperties.swift */; };
+		B096D2CF2A35496200498C33 /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2C52A35496200498C33 /* Club+CoreDataClass.swift */; };
+		B096D2D02A35496200498C33 /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2C62A35496200498C33 /* Club+CoreDataProperties.swift */; };
+		B096D2D12A35496200498C33 /* ActivityAttendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2C72A35496200498C33 /* ActivityAttendance+CoreDataClass.swift */; };
+		B096D2D22A35496200498C33 /* ActivityAttendance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2C82A35496200498C33 /* ActivityAttendance+CoreDataProperties.swift */; };
+		B096D2D32A35496200498C33 /* ClubMembership+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2C92A35496200498C33 /* ClubMembership+CoreDataClass.swift */; };
+		B096D2D42A35496200498C33 /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2CA2A35496200498C33 /* ClubMembership+CoreDataProperties.swift */; };
+		B096D2D52A35496200498C33 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2CB2A35496200498C33 /* Activity+CoreDataClass.swift */; };
+		B096D2D62A35496200498C33 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2CC2A35496200498C33 /* Activity+CoreDataProperties.swift */; };
+		B096D2D72A35496200498C33 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2CD2A35496200498C33 /* Contact+CoreDataClass.swift */; };
+		B096D2D82A35496200498C33 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2CE2A35496200498C33 /* Contact+CoreDataProperties.swift */; };
 		B0DFC7662A2571F900C4BD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0DFC7652A2571F900C4BD82 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -68,16 +68,16 @@
 		2BBEDAC629FB751F00316CFD /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		B096D2852A2D1EA200498C33 /* AttendeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListView.swift; sourceTree = "<group>"; };
 		B096D2872A2D231600498C33 /* AttendeeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeAddView.swift; sourceTree = "<group>"; };
-		B096D2B12A3529B000498C33 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2B22A3529B000498C33 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2B32A3529B000498C33 /* ClubMembership+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2B42A3529B000498C33 /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2B52A3529B000498C33 /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2B62A3529B000498C33 /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2B72A3529B000498C33 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2B82A3529B000498C33 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2B92A3529B000498C33 /* ActivityAttendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		B096D2BA2A3529B000498C33 /* ActivityAttendance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2C52A35496200498C33 /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2C62A35496200498C33 /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2C72A35496200498C33 /* ActivityAttendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2C82A35496200498C33 /* ActivityAttendance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2C92A35496200498C33 /* ClubMembership+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2CA2A35496200498C33 /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2CB2A35496200498C33 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2CC2A35496200498C33 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2CD2A35496200498C33 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B096D2CE2A35496200498C33 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B0DFC7652A2571F900C4BD82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -191,16 +191,16 @@
 		B096D2702A2C10CA00498C33 /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				B096D2B12A3529B000498C33 /* Activity+CoreDataClass.swift */,
-				B096D2B22A3529B000498C33 /* Activity+CoreDataProperties.swift */,
-				B096D2B32A3529B000498C33 /* ClubMembership+CoreDataClass.swift */,
-				B096D2B42A3529B000498C33 /* ClubMembership+CoreDataProperties.swift */,
-				B096D2B52A3529B000498C33 /* Club+CoreDataClass.swift */,
-				B096D2B62A3529B000498C33 /* Club+CoreDataProperties.swift */,
-				B096D2B72A3529B000498C33 /* Contact+CoreDataClass.swift */,
-				B096D2B82A3529B000498C33 /* Contact+CoreDataProperties.swift */,
-				B096D2B92A3529B000498C33 /* ActivityAttendance+CoreDataClass.swift */,
-				B096D2BA2A3529B000498C33 /* ActivityAttendance+CoreDataProperties.swift */,
+				B096D2C52A35496200498C33 /* Club+CoreDataClass.swift */,
+				B096D2C62A35496200498C33 /* Club+CoreDataProperties.swift */,
+				B096D2C72A35496200498C33 /* ActivityAttendance+CoreDataClass.swift */,
+				B096D2C82A35496200498C33 /* ActivityAttendance+CoreDataProperties.swift */,
+				B096D2C92A35496200498C33 /* ClubMembership+CoreDataClass.swift */,
+				B096D2CA2A35496200498C33 /* ClubMembership+CoreDataProperties.swift */,
+				B096D2CB2A35496200498C33 /* Activity+CoreDataClass.swift */,
+				B096D2CC2A35496200498C33 /* Activity+CoreDataProperties.swift */,
+				B096D2CD2A35496200498C33 /* Contact+CoreDataClass.swift */,
+				B096D2CE2A35496200498C33 /* Contact+CoreDataProperties.swift */,
 			);
 			path = CoreDataModels;
 			sourceTree = "<group>";
@@ -277,11 +277,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B7AB1AD2A242CE500A1C993 /* ContactViewModel.swift in Sources */,
+				B096D2D32A35496200498C33 /* ClubMembership+CoreDataClass.swift in Sources */,
+				B096D2D82A35496200498C33 /* Contact+CoreDataProperties.swift in Sources */,
 				2B7AB1A52A198DD700A1C993 /* VolunteerActivitiesView.swift in Sources */,
-				B096D2C42A3529B000498C33 /* ActivityAttendance+CoreDataProperties.swift in Sources */,
+				B096D2D42A35496200498C33 /* ClubMembership+CoreDataProperties.swift in Sources */,
+				B096D2D72A35496200498C33 /* Contact+CoreDataClass.swift in Sources */,
+				B096D2D52A35496200498C33 /* Activity+CoreDataClass.swift in Sources */,
 				B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */,
-				B096D2C02A3529B000498C33 /* Club+CoreDataProperties.swift in Sources */,
-				B096D2C22A3529B000498C33 /* Contact+CoreDataProperties.swift in Sources */,
+				B096D2CF2A35496200498C33 /* Club+CoreDataClass.swift in Sources */,
 				2BB8E0892A072C4800CB3F2D /* ActivityDetailView.swift in Sources */,
 				2B7AB1B12A242D9900A1C993 /* PersistenceController.swift in Sources */,
 				2BB8E08D2A072C6B00CB3F2D /* ActivityAddView.swift in Sources */,
@@ -291,22 +294,19 @@
 				2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */,
 				2BBEDAC729FB751F00316CFD /* ContactDetailView.swift in Sources */,
 				2BA0483629FA276800476352 /* HomesteadClubs.xcdatamodeld in Sources */,
+				B096D2D22A35496200498C33 /* ActivityAttendance+CoreDataProperties.swift in Sources */,
 				2BB8E06F2A06055300CB3F2D /* ContactEditView.swift in Sources */,
-				B096D2BC2A3529B000498C33 /* Activity+CoreDataProperties.swift in Sources */,
 				2BA0482A29FA276700476352 /* HomesteadClubsApp.swift in Sources */,
-				B096D2BD2A3529B000498C33 /* ClubMembership+CoreDataClass.swift in Sources */,
-				B096D2BB2A3529B000498C33 /* Activity+CoreDataClass.swift in Sources */,
+				B096D2D02A35496200498C33 /* Club+CoreDataProperties.swift in Sources */,
 				2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */,
+				B096D2D12A35496200498C33 /* ActivityAttendance+CoreDataClass.swift in Sources */,
+				B096D2D62A35496200498C33 /* Activity+CoreDataProperties.swift in Sources */,
 				2B7AB1A72A19938400A1C993 /* VolunteerViewModel.swift in Sources */,
 				B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */,
 				2B7AB1A92A19981D00A1C993 /* Volunteer.swift in Sources */,
-				B096D2C12A3529B000498C33 /* Contact+CoreDataClass.swift in Sources */,
-				B096D2BF2A3529B000498C33 /* Club+CoreDataClass.swift in Sources */,
-				B096D2BE2A3529B000498C33 /* ClubMembership+CoreDataProperties.swift in Sources */,
 				2B7AB1AB2A24101C00A1C993 /* MainView.swift in Sources */,
 				2B7AB1A32A198DB900A1C993 /* VolunteerListView.swift in Sources */,
 				2BB8E08B2A072C5B00CB3F2D /* ActivityEditView.swift in Sources */,
-				B096D2C32A3529B000498C33 /* ActivityAttendance+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

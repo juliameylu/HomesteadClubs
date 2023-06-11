@@ -25,14 +25,12 @@ struct ContactListView: View {
                                 .overlay(Circle().stroke(Color.gray, lineWidth: 2))
                             
                             Text(contact.first_name ?? "")
-                                .fontWeight(.semibold)
-                                .font(.headline)
                             
-                            Text(contact.middle_name ?? "")
-                                .font(.subheadline)
+                            if let middleName = contact.middle_name {
+                                Text(middleName)
+                            }
                             
                             Text(contact.last_name ?? "")
-                                .font(.subheadline)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)

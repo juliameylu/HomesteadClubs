@@ -37,7 +37,9 @@ class ActivityViewModel: ObservableObject {
     
     func fetchNonMembers(contacts: [Contact], attendances: [ActivityAttendance]) -> [Contact] {
         let activityMembers = attendances.map { $0.attendedBy }
-        return contacts.filter{ !activityMembers.contains($0) }
+        return contacts
+            .filter{ $0.isMember }
+            .filter{ !activityMembers.contains($0) }
     }
     
     func addActivity(name: String, notes: String, beginDateTime: Date, endDateTime: Date, creditHours: Int16, sponsor: Contact) {
@@ -55,6 +57,10 @@ class ActivityViewModel: ObservableObject {
     }
     
     func addAttendance(contact: Contact, activity: Activity) {
+        if !contact.isMember {
+            return
+        }
+        
         let attendance = ActivityAttendance(context: viewContext)
         attendance.attendedBy = contact
         attendance.attending = activity
@@ -69,7 +75,9 @@ class ActivityViewModel: ObservableObject {
             return
         }
         
-        let attendances = Set(attendees.map {
+        let memberAttendees = attendees.filter{ $0.isMember }
+        
+        let attendances = Set(memberAttendees.map {
             let attendance = ActivityAttendance(context: viewContext)
             attendance.attendedBy = $0
             attendance.attending = activity
