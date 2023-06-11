@@ -3,7 +3,7 @@
     <entity name="Activity" representedClassName=".Activity" syncable="YES">
         <attribute name="beginDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="city" optional="YES" attributeType="String"/>
-        <attribute name="creditHours" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="creditHours" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="endDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>

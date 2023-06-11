@@ -14,8 +14,8 @@
             filePath = "HomesteadClubs/Views/Activities/ActivityAddView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -119,17 +119,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C9428469-7BCB-4B36-9350-418E367FF8B1"
+            uuid = "5C5660AC-9ACD-4E05-B29F-A2EE6BBB7464"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomesteadClubs/ViewModels/ActivityViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "computeCreditHours(beginDateTime:endDateTime:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DABF3A5-678E-4DA1-875B-5769C2358B4B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/ViewModels/ActivityViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "computeCreditHours(beginDateTime:endDateTime:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8DABF3A5-678E-4DA1-875B-5769C2358B4B - bd4ac82c4a9c36e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityViewModel.computeCreditHours(beginDateTime: Foundation.Date, endDateTime: Foundation.Date) -&gt; Swift.Float"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1828">
+               </Location>
+               <Location
+                  uuid = "8DABF3A5-678E-4DA1-875B-5769C2358B4B - bd4ac82c4a9c36e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityViewModel.computeCreditHours(beginDateTime: Foundation.Date, endDateTime: Foundation.Date) -&gt; Swift.Float"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1646">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

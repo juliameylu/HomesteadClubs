@@ -2,7 +2,7 @@
 //  Contact+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/10/23.
+//  Created by Julia Lu on 6/11/23.
 //
 //
 
@@ -19,10 +19,10 @@ extension Contact {
     @NSManaged public var email: String?
     @NSManaged public var first_name: String?
     @NSManaged public var id: UUID?
+    @NSManaged public var isMember: Bool
     @NSManaged public var last_name: String?
     @NSManaged public var middle_name: String?
     @NSManaged public var phone: String?
-    @NSManaged public var isMember: Bool
     @NSManaged public var attending: NSSet?
     @NSManaged public var membership: NSSet?
     @NSManaged public var sponsor: Activity?

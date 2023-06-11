@@ -11,7 +11,7 @@ struct Volunteer : Identifiable & Hashable {
     var contact: Contact
     var id: UUID
     var activities: [Activity]
-    var totalCreditHours: Int16
+    var totalCreditHours: Float
     
     init(contact: Contact, activities: [Activity]) {
         self.contact = contact

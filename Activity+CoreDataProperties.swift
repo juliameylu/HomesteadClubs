@@ -2,7 +2,7 @@
 //  Activity+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/10/23.
+//  Created by Julia Lu on 6/11/23.
 //
 //
 
@@ -18,7 +18,7 @@ extension Activity {
 
     @NSManaged public var beginDateTime: Date?
     @NSManaged public var city: String?
-    @NSManaged public var creditHours: Int16
+    @NSManaged public var creditHours: Float
     @NSManaged public var endDateTime: Date?
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?

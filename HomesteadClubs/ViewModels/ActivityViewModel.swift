@@ -42,7 +42,7 @@ class ActivityViewModel: ObservableObject {
             .filter{ !activityMembers.contains($0) }
     }
     
-    func addActivity(name: String, notes: String, beginDateTime: Date, endDateTime: Date, creditHours: Int16, sponsor: Contact) {
+    func addActivity(name: String, notes: String, beginDateTime: Date, endDateTime: Date, creditHours: Float, sponsor: Contact) {
         let activity = Activity(context: viewContext)
         
         activity.id = UUID()
@@ -122,10 +122,15 @@ class ActivityViewModel: ObservableObject {
         fetchActivities()
     }
     
-    func computeCreditHours(beginDateTime: Date, endDateTime: Date) -> Int16 {
-        let deltaTimeInterval = beginDateTime.distance(to: endDateTime)
-        let deltaHours = (deltaTimeInterval / 3600).truncatingRemainder(dividingBy: 3600)
-        return Int16(deltaHours)
+    func computeCreditHours(beginDateTime: Date, endDateTime: Date) -> Float {
+        let diffComponents = Calendar.current.dateComponents([.hour, .minute], from: beginDateTime, to: endDateTime)
+        let hours = Float(diffComponents.hour!)
+        let fractionHour = Float(diffComponents.minute!) / 60
+        
+        let nearestQuarterHour = (fractionHour * 2).rounded() / 2
+        
+        let creditHours = Float(hours) + nearestQuarterHour
+        return creditHours
     }
     
     func truncateToMinutes(date: Date) -> Date {
@@ -134,6 +139,19 @@ class ActivityViewModel: ObservableObject {
         var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
         components.second = 0
         components.nanosecond = 0
+
+        return calendar.date(from: components)!
+    }
+    
+    func hoursFrom(date: Date, hours: Int) -> Date {
+        let calendar = Calendar(identifier: .gregorian)
+        
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+        components.hour! += hours
+        
+        components.second = 0
+        components.nanosecond = 0
+        components.minute = 0
 
         return calendar.date(from: components)!
     }

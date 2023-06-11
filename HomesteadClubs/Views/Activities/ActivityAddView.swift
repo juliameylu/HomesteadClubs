@@ -18,7 +18,7 @@ struct ActivityAddView: View {
     @State var beginDateTime = Date.now
     @State var endDateTime = Date.now
     @State var sponsor: Contact?
-    @State var creditHours: Int16 = 0
+    @State var creditHours: Float = 0
     
     @State var readyToNavigate = false
     @State var showErrorMessage = false
@@ -46,11 +46,18 @@ struct ActivityAddView: View {
                     Section("Time") {
                         DatePicker("Begin", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
                         .onChange(of: beginDateTime) { _ in
+                            if (endDateTime < beginDateTime) {
+                                endDateTime = activityViewModel.hoursFrom(date: beginDateTime, hours: 1)
+                            }
                             creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
                         }
                         
                         DatePicker("End", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
                         .onChange(of: endDateTime) { _ in
+                            if (beginDateTime > endDateTime) {
+                                beginDateTime = activityViewModel.hoursFrom(date: endDateTime, hours: -1)
+                            }
+
                             creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
                         }
 
@@ -115,7 +122,7 @@ struct ActivityAddView: View {
             self.name = ""
             self.notes = ""
             
-            self.beginDateTime = oneHourFromNow()
+            self.beginDateTime = activityViewModel.hoursFrom(date: Date.now, hours: 1)
             self.endDateTime = self.beginDateTime.addingTimeInterval(60 * 60)
             self.creditHours = activityViewModel.computeCreditHours(beginDateTime: self.beginDateTime, endDateTime: self.endDateTime)
 
@@ -129,17 +136,4 @@ struct ActivityAddView: View {
             self.showErrorMessage = false
         }
     } // body
-    
-    func oneHourFromNow() -> Date {
-        let calendar = Calendar(identifier: .gregorian)
-        
-        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: Date.now)
-        components.hour! += 1
-        
-        components.second = 0
-        components.nanosecond = 0
-        components.minute = 0
-
-        return calendar.date(from: components)!
-    }
 }

@@ -2,7 +2,7 @@
 //  ClubMembership+CoreDataClass.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/10/23.
+//  Created by Julia Lu on 6/11/23.
 //
 //
 

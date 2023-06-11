@@ -17,7 +17,7 @@ struct ActivityEditView: View {
     @State var notes: String
     @State var beginDateTime: Date
     @State var endDateTime: Date
-    @State var creditHours: Int16
+    @State var creditHours: Float
     @State var sponsor: Contact?
     
     @State var readyToNavigate = false
@@ -59,11 +59,19 @@ struct ActivityEditView: View {
                     Section("Time") {
                         DatePicker("Begin", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
                         .onChange(of: beginDateTime) { _ in
+                            if (endDateTime < beginDateTime) {
+                                endDateTime = activityViewModel.hoursFrom(date: beginDateTime, hours: 1)
+                            }
+                            
                             creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
                         }
                         
                         DatePicker("End", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
                         .onChange(of: endDateTime) { _ in
+                            if (beginDateTime > endDateTime) {
+                                beginDateTime = activityViewModel.hoursFrom(date: endDateTime, hours: -1)
+                            }
+                            
                             creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
                         }
 
