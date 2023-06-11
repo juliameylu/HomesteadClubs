@@ -34,6 +34,9 @@ struct AttendeeAddView: View {
                 Spacer()
                 Button("Add", action: {
                     activityViewModel.addAttendances(attendees: selections, activity: activity)
+                    
+                    // Need to remove all because the view is still active and contains the old selections
+                    selections.removeAll()
                 })
             }
         }
