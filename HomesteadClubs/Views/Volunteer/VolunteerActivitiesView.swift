@@ -19,7 +19,7 @@ struct VolunteerActivitiesView: View {
                 ForEach(volunteer.activities, id: \.id) { activity in
                     VStack(alignment: .leading) {
                         HStack {
-                            Image("park")
+                            Image("activity")
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke(Color.gray, lineWidth: 2))
 

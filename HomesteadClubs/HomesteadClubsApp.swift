@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct HomesteadClubsApp: App {
-//    let persistenceController = PersistenceController.shared
     @StateObject var contactViewModel = ContactViewModel()
     @StateObject var activityViewModel = ActivityViewModel()
     @StateObject var volunteerViewModel = VolunteerViewModel()
@@ -20,8 +19,6 @@ struct HomesteadClubsApp: App {
                 .environmentObject(contactViewModel)
                 .environmentObject(activityViewModel)
                 .environmentObject(volunteerViewModel)
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

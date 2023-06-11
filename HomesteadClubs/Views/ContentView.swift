@@ -37,7 +37,7 @@ struct ContentView: View {
                     } label: {
                         VStack(alignment: .leading) {
                             HStack {
-                                Image("park")
+                                Image("activity")
                                     .clipShape(Circle())
                                     .overlay(Circle().stroke(Color.gray, lineWidth: 2))
 
