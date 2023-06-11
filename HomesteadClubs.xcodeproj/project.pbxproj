@@ -40,7 +40,6 @@
 		B033A8872A3662C700CF2FAE /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033A87D2A3662C700CF2FAE /* ClubMembership+CoreDataProperties.swift */; };
 		B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2852A2D1EA200498C33 /* AttendeeListView.swift */; };
 		B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2872A2D231600498C33 /* AttendeeAddView.swift */; };
-		B0DFC7662A2571F900C4BD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0DFC7652A2571F900C4BD82 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +77,6 @@
 		B033A87D2A3662C700CF2FAE /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B096D2852A2D1EA200498C33 /* AttendeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListView.swift; sourceTree = "<group>"; };
 		B096D2872A2D231600498C33 /* AttendeeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeAddView.swift; sourceTree = "<group>"; };
-		B0DFC7652A2571F900C4BD82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				B096D2702A2C10CA00498C33 /* CoreDataModels */,
-				B0DFC7652A2571F900C4BD82 /* Assets.xcassets */,
 				2BBEDACA29FB766E00316CFD /* ViewModels */,
 				2BBEDAC329FB749B00316CFD /* Views */,
 				2BA0482929FA276700476352 /* HomesteadClubsApp.swift */,
@@ -264,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA0483129FA276800476352 /* Preview Assets.xcassets in Resources */,
-				B0DFC7662A2571F900C4BD82 /* Assets.xcassets in Resources */,
 				2BA0482E29FA276800476352 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
