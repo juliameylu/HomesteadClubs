@@ -58,16 +58,24 @@ struct ActivityEditView: View {
                     
                     Section("Time") {
                         DatePicker("Begin", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
+                        .onChange(of: beginDateTime) { _ in
+                            creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
+                        }
                         
                         DatePicker("End", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
-                        
+                        .onChange(of: endDateTime) { _ in
+                            creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
+                        }
+
                         HStack {
-                            Text("Hours:")
+                            Text("Hours")
+                            Spacer()
                             TextField("Credit Hours", value: $creditHours, format: .number)
                                 .textFieldStyle(.roundedBorder)
                                 .padding(5)
                                 .background(Color(.systemGray6))
                                 .cornerRadius(8)
+                                .disabled(true)
                         }
                     }
                     
@@ -76,8 +84,8 @@ struct ActivityEditView: View {
                             ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
                                 HStack {
                                     Text(contact.first_name!)
-                                    //                                        .tag(contact as Contact?)
                                     Text(contact.last_name!)
+                                    // .tag(contact as Contact?)
                                 }.tag(contact as Contact?)
                             }
                         }
@@ -88,14 +96,6 @@ struct ActivityEditView: View {
                             .background(Color(.systemGray6))
                             .cornerRadius(8)
                     } // Section
-                    
-                    
-                    //                Picker("Sponsor", selection: $sponsor) {
-                    //                    ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
-                    //                        Text(contact.first_name!)
-                    //                            .tag(contact as Contact?)
-                    //                    }
-                    //                } // Picker
                 } // Form
             } // VStack
             .navigationBarBackButtonHidden(true)

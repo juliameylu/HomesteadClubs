@@ -13,15 +13,16 @@ struct ActivityAddView: View {
     
     @Environment (\.presentationMode) var presentationMode
     
-    @State var name: String = ""
-    @State var notes: String = ""
-    @State var beginDateTime: Date = Date.now
-    @State var endDateTime: Date = Date.now.addingTimeInterval(60 * 60)
+    @State var name = ""
+    @State var notes = ""
+    @State var beginDateTime = Date.now
+    @State var endDateTime = Date.now
     @State var sponsor: Contact?
-    @State var showErrorMessage = false
+    @State var creditHours: Int16 = 0
     
     @State var readyToNavigate = false
-    
+    @State var showErrorMessage = false
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -44,8 +45,25 @@ struct ActivityAddView: View {
                     
                     Section("Time") {
                         DatePicker("Begin", selection: $beginDateTime, displayedComponents: [.date, .hourAndMinute])
+                        .onChange(of: beginDateTime) { _ in
+                            creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
+                        }
                         
                         DatePicker("End", selection: $endDateTime, displayedComponents: [.date, .hourAndMinute])
+                        .onChange(of: endDateTime) { _ in
+                            creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
+                        }
+
+                        HStack {
+                            Text("Hours")
+                            Spacer()
+                            TextField("Credit Hours", value: $creditHours, format: .number)
+                                .textFieldStyle(.roundedBorder)
+                                .padding(5)
+                                .background(Color(.systemGray6))
+                                .cornerRadius(8)
+                                .disabled(true)
+                        }
                     }
                     
                     Section("Other") {
@@ -94,10 +112,34 @@ struct ActivityAddView: View {
         } // NavigationStack
         // initialize state vars in onAppear because the EnvironmentObject is injected (created) after the view constructor
         .onAppear {
+            self.name = ""
+            self.notes = ""
+            
+            self.beginDateTime = oneHourFromNow()
+            self.endDateTime = self.beginDateTime.addingTimeInterval(60 * 60)
+            self.creditHours = activityViewModel.computeCreditHours(beginDateTime: self.beginDateTime, endDateTime: self.endDateTime)
+
+
             let contacts = contactViewModel.contacts
             if !contacts.isEmpty {
                 self.sponsor = contacts[0]
             }
+            
+            self.readyToNavigate = false
+            self.showErrorMessage = false
         }
     } // body
+    
+    func oneHourFromNow() -> Date {
+        let calendar = Calendar(identifier: .gregorian)
+        
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: Date.now)
+        components.hour! += 1
+        
+        components.second = 0
+        components.nanosecond = 0
+        components.minute = 0
+
+        return calendar.date(from: components)!
+    }
 }

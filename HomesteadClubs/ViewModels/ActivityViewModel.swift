@@ -127,4 +127,14 @@ class ActivityViewModel: ObservableObject {
         let deltaHours = (deltaTimeInterval / 3600).truncatingRemainder(dividingBy: 3600)
         return Int16(deltaHours)
     }
+    
+    func truncateToMinutes(date: Date) -> Date {
+        let calendar = Calendar(identifier: .gregorian)
+        
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+        components.second = 0
+        components.nanosecond = 0
+
+        return calendar.date(from: components)!
+    }
 }
