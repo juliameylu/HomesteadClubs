@@ -52,5 +52,8 @@ struct VolunteerListView: View {
             //                }
             //            )
         } // NavigationStack
+        .onAppear {
+            volunteerViewModel.fetchVolunteers()
+        }
     }
 }

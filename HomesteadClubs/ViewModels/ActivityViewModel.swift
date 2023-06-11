@@ -65,6 +65,10 @@ class ActivityViewModel: ObservableObject {
     }
 
     func addAttendances(attendees: Set<Contact>, activity: Activity) {
+        if attendees.isEmpty {
+            return
+        }
+        
         let attendances = Set(attendees.map {
             let attendance = ActivityAttendance(context: viewContext)
             attendance.attendedBy = $0

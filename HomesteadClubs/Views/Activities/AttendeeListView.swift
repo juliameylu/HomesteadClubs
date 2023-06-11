@@ -26,14 +26,10 @@ struct AttendeeListView: View {
                             .overlay(Circle().stroke(Color.gray, lineWidth: 2))
                         
                         Text(attendance.attendedBy!.first_name ?? "")
-                            .fontWeight(.semibold)
-                            .font(.headline)
                         
                         Text(attendance.attendedBy!.middle_name ?? "")
-                            .font(.subheadline)
                         
                         Text(attendance.attendedBy!.last_name ?? "")
-                            .font(.subheadline)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)

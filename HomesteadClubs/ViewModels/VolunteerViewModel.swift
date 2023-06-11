@@ -20,7 +20,6 @@ class VolunteerViewModel: ObservableObject {
         let request = NSFetchRequest<Activity>(entityName: "Activity")
         
         do {
-//            var volunteerDict: [Contact: [Activity]] = [:]
             var volunteerDict: Dictionary<Contact, Array<Activity>> = [:]
             
             do {

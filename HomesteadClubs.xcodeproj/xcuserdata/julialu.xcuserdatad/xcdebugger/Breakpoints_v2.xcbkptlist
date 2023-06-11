@@ -55,86 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B94E4900-2030-4FE3-84D1-0554EAA8E105"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomesteadClubs/ViewModels/VolunteerViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "fetchVolunteers()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FB57FC4A-F19D-43FD-AE5D-11B244AFE416"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomesteadClubs/ViewModels/VolunteerViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "fetchVolunteers()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A1DE1807-9933-4E20-B6EB-0A02DBF1579F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomesteadClubs/ViewModels/VolunteerViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "fetchVolunteers()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A1DE1807-9933-4E20-B6EB-0A02DBF1579F - 8a627b76d20ae453"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomesteadClubs.VolunteerViewModel.fetchVolunteers() -&gt; ()"
-                  moduleName = "HomesteadClubs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/ViewModels/VolunteerViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "499">
-               </Location>
-               <Location
-                  uuid = "A1DE1807-9933-4E20-B6EB-0A02DBF1579F - d21e450bfd7965b1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (HomesteadClubs.Contact, Swift.Array&lt;HomesteadClubs.Activity&gt;) -&gt; HomesteadClubs.Volunteer in HomesteadClubs.VolunteerViewModel.fetchVolunteers() -&gt; ()"
-                  moduleName = "HomesteadClubs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/ViewModels/VolunteerViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "DD5BE872-143E-4884-B572-3CE98C3BFD80"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -192,6 +112,70 @@
                   startingLineNumber = "27"
                   endingLineNumber = "27"
                   offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "313F93EF-ECEA-4C24-91DC-E76011EF8ABC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/ViewModels/ActivityViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "addAttendances(attendees:activity:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76FF21DC-D73C-48DC-ACBC-4638A896CFA0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomesteadClubs/ViewModels/ActivityViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "addAttendances(attendees:activity:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "76FF21DC-D73C-48DC-ACBC-4638A896CFA0 - 99020a0b8f820ecc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomesteadClubs.ActivityViewModel.addAttendances(attendees: Swift.Set&lt;HomesteadClubs.Contact&gt;, activity: HomesteadClubs.Activity) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "78">
+               </Location>
+               <Location
+                  uuid = "76FF21DC-D73C-48DC-ACBC-4638A896CFA0 - b6ab25fae46af22d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (HomesteadClubs.Contact) -&gt; HomesteadClubs.ActivityAttendance in HomesteadClubs.ActivityViewModel.addAttendances(attendees: Swift.Set&lt;HomesteadClubs.Contact&gt;, activity: HomesteadClubs.Activity) -&gt; ()"
+                  moduleName = "HomesteadClubs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julialu/code/HomesteadClubs/HomesteadClubs/ViewModels/ActivityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "81">
                </Location>
             </Locations>
          </BreakpointContent>

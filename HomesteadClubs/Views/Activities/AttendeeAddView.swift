@@ -19,14 +19,10 @@ struct AttendeeAddView: View {
         List(activityViewModel.fetchNonMembers(contacts: contactViewModel.contacts, attendances: activity.attendanceArray), id: \.self, selection: $selections) { (contact: Contact) in
             HStack {
                 Text(contact.first_name ?? "")
-                    .fontWeight(.semibold)
-                    .font(.headline)
 
                 Text(contact.middle_name ?? "")
-                    .font(.subheadline)
 
                 Text(contact.last_name ?? "")
-                    .font(.subheadline)
             } // HStack
         } // List
         .navigationTitle("Add Attendees")
