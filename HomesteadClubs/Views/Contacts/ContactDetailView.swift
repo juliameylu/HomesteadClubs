@@ -11,15 +11,8 @@ struct ContactDetailView: View {
     @EnvironmentObject var contactViewModel: ContactViewModel
 
     @State private var isPresentingEditView = false
-    @State private var isMember = true
  
     var contact: Contact
-    
-    init(contact: Contact) {
-        self.contact = contact
-        
-        _isMember = State(initialValue: contact.isMember)
-    }
     
     var body: some View {
         NavigationStack {
@@ -47,9 +40,11 @@ struct ContactDetailView: View {
                 } // Section
                 
                 Section("Membership") {
-                    Toggle(isOn: $isMember) {
-                        Text("Club Member")
-                    }.disabled(true)
+                    HStack {
+                        Text("isMember?")
+                        Spacer()
+                        Text(contact.isMember ? "Yes" : "No")
+                    }
                 }
                 
                 Section("Contact Info") {
