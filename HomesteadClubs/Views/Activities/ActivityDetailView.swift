@@ -54,6 +54,15 @@ struct ActivityDetailView: View {
                 }
             } // Section
             
+            Section("Address") {
+                VStack(alignment: .leading) {
+                    Text(activity.street ?? "")
+                    Text(activity.city ?? "")
+                    Text(activity.state ?? "")
+                    Text(activity.zip ?? "")
+                }
+            }
+            
             Section(header: Text("Sponsor")) {
                 HStack {
                     Text(activity.sponsor?.first_name ?? "")

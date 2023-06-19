@@ -19,6 +19,10 @@ struct ActivityAddView: View {
     @State var endDateTime = Date.now
     @State var sponsor: Contact?
     @State var creditHours: Float = 0
+    @State var street = ""
+    @State var city = ""
+    @State var state = ""
+    @State var zip = ""
     
     @State var readyToNavigate = false
     @State var showErrorMessage = false
@@ -73,6 +77,15 @@ struct ActivityAddView: View {
                         }
                     }
                     
+                    Section("Address") {
+                        VStack {
+                            TextField("Street", text: $street)
+                            TextField("City", text: $city)
+                            TextField("State", text: $state)
+                            TextField("Zip", text: $zip)
+                        }
+                    }
+                    
                     Section("Other") {
                         Picker("Sponsor", selection: $sponsor) {
                             ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
@@ -103,14 +116,15 @@ struct ActivityAddView: View {
                         if (creditHours <= 0) {
                             showErrorMessage = true
                         } else {
-                            activityViewModel.addActivity(name: name, notes: notes, beginDateTime: beginDateTime, endDateTime: endDateTime, creditHours: creditHours, sponsor: sponsor!)
+                            activityViewModel.addActivity(name: name, notes: notes, beginDateTime: beginDateTime, endDateTime: endDateTime, creditHours: creditHours, sponsor: sponsor!,
+                                                          street: street, city: city, state: state, zip: zip)
                             self.readyToNavigate = true
                             self.presentationMode.wrappedValue.dismiss()
                         }
                     }) {
                         Text("Done")
                     }
-                    .disabled(name.isEmpty)
+                    .disabled(name.isEmpty || street.isEmpty || city.isEmpty || state.isEmpty)
             ) // navigationBarItems
             .alert(isPresented: $showErrorMessage) { () -> Alert in
                 Alert(title: Text("Check Dates"), message: Text("End Date should come after Begin Date"),

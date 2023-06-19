@@ -19,6 +19,10 @@ struct ActivityEditView: View {
     @State var endDateTime: Date
     @State var creditHours: Float
     @State var sponsor: Contact?
+    @State var street = ""
+    @State var city = ""
+    @State var state = ""
+    @State var zip = ""
     
     @State var readyToNavigate = false
     
@@ -32,6 +36,10 @@ struct ActivityEditView: View {
         _beginDateTime = State(initialValue: activity.beginDateTime ?? Date.now)
         _endDateTime = State(initialValue: activity.endDateTime ?? Date.now)
         _creditHours = State(initialValue: activity.creditHours)
+        _street = State(initialValue: activity.street ?? "")
+        _city = State(initialValue: activity.city ?? "")
+        _state = State(initialValue: activity.state ?? "")
+        _zip = State(initialValue: activity.zip ?? "")
         
         _sponsor = State(initialValue: activity.sponsor)
     }
@@ -87,6 +95,15 @@ struct ActivityEditView: View {
                         }
                     }
                     
+                    Section("Address") {
+                        VStack {
+                            TextField("Street", text: $street)
+                            TextField("City", text: $city)
+                            TextField("State", text: $state)
+                            TextField("Zip", text: $zip)
+                        }
+                    }
+                    
                     Section("Other") {
                         Picker("Sponsor", selection: $sponsor) {
                             ForEach(contactViewModel.contacts, id: \.self) { (contact: Contact) in
@@ -120,6 +137,10 @@ struct ActivityEditView: View {
                         activity.endDateTime = endDateTime
                         activity.creditHours = activityViewModel.computeCreditHours(beginDateTime: beginDateTime, endDateTime: endDateTime)
                         activity.sponsor = sponsor
+                        activity.street = street
+                        activity.city = city
+                        activity.state = state
+                        activity.zip = zip
                     
                         activityViewModel.editActivity(activity: activity)
                         self.readyToNavigate = true

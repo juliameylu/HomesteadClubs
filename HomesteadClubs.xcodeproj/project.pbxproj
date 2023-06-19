@@ -28,16 +28,16 @@
 		2BBEDAC729FB751F00316CFD /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC429FB751F00316CFD /* ContactDetailView.swift */; };
 		2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC529FB751F00316CFD /* ContactAddView.swift */; };
 		2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC629FB751F00316CFD /* ContactListView.swift */; };
-		2BF635F62A36AA5600B37553 /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635EC2A36AA5600B37553 /* Club+CoreDataClass.swift */; };
-		2BF635F72A36AA5600B37553 /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635ED2A36AA5600B37553 /* Club+CoreDataProperties.swift */; };
-		2BF635F82A36AA5600B37553 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635EE2A36AA5600B37553 /* Activity+CoreDataClass.swift */; };
-		2BF635F92A36AA5600B37553 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635EF2A36AA5600B37553 /* Activity+CoreDataProperties.swift */; };
-		2BF635FA2A36AA5600B37553 /* ActivityAttendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635F02A36AA5600B37553 /* ActivityAttendance+CoreDataClass.swift */; };
-		2BF635FB2A36AA5600B37553 /* ActivityAttendance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635F12A36AA5600B37553 /* ActivityAttendance+CoreDataProperties.swift */; };
-		2BF635FC2A36AA5600B37553 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635F22A36AA5600B37553 /* Contact+CoreDataClass.swift */; };
-		2BF635FD2A36AA5600B37553 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635F32A36AA5600B37553 /* Contact+CoreDataProperties.swift */; };
-		2BF635FE2A36AA5600B37553 /* ClubMembership+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635F42A36AA5600B37553 /* ClubMembership+CoreDataClass.swift */; };
-		2BF635FF2A36AA5600B37553 /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF635F52A36AA5600B37553 /* ClubMembership+CoreDataProperties.swift */; };
+		B002D6BC2A3FF9E20051B4F6 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B22A3FF9E20051B4F6 /* Activity+CoreDataClass.swift */; };
+		B002D6BD2A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B32A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift */; };
+		B002D6BE2A3FF9E20051B4F6 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B42A3FF9E20051B4F6 /* Contact+CoreDataClass.swift */; };
+		B002D6BF2A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B52A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift */; };
+		B002D6C02A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B62A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift */; };
+		B002D6C12A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B72A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift */; };
+		B002D6C22A3FF9E20051B4F6 /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B82A3FF9E20051B4F6 /* Club+CoreDataClass.swift */; };
+		B002D6C32A3FF9E20051B4F6 /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B92A3FF9E20051B4F6 /* Club+CoreDataProperties.swift */; };
+		B002D6C42A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6BA2A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift */; };
+		B002D6C52A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6BB2A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift */; };
 		B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2852A2D1EA200498C33 /* AttendeeListView.swift */; };
 		B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2872A2D231600498C33 /* AttendeeAddView.swift */; };
 /* End PBXBuildFile section */
@@ -65,16 +65,16 @@
 		2BBEDAC429FB751F00316CFD /* ContactDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		2BBEDAC529FB751F00316CFD /* ContactAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactAddView.swift; sourceTree = "<group>"; };
 		2BBEDAC629FB751F00316CFD /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
-		2BF635EC2A36AA5600B37553 /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635ED2A36AA5600B37553 /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635EE2A36AA5600B37553 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635EF2A36AA5600B37553 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635F02A36AA5600B37553 /* ActivityAttendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635F12A36AA5600B37553 /* ActivityAttendance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635F22A36AA5600B37553 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635F32A36AA5600B37553 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635F42A36AA5600B37553 /* ClubMembership+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2BF635F52A36AA5600B37553 /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B002D6B22A3FF9E20051B4F6 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B002D6B32A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B002D6B42A3FF9E20051B4F6 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B002D6B52A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B002D6B62A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B002D6B72A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B002D6B82A3FF9E20051B4F6 /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B002D6B92A3FF9E20051B4F6 /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B002D6BA2A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B002D6BB2A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B096D2852A2D1EA200498C33 /* AttendeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListView.swift; sourceTree = "<group>"; };
 		B096D2872A2D231600498C33 /* AttendeeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +102,16 @@
 		2BA0481D29FA276700476352 = {
 			isa = PBXGroup;
 			children = (
+				B002D6B22A3FF9E20051B4F6 /* Activity+CoreDataClass.swift */,
+				B002D6B32A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift */,
+				B002D6B42A3FF9E20051B4F6 /* Contact+CoreDataClass.swift */,
+				B002D6B52A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift */,
+				B002D6B62A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift */,
+				B002D6B72A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift */,
+				B002D6B82A3FF9E20051B4F6 /* Club+CoreDataClass.swift */,
+				B002D6B92A3FF9E20051B4F6 /* Club+CoreDataProperties.swift */,
+				B002D6BA2A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift */,
+				B002D6BB2A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift */,
 				2BA0482829FA276700476352 /* HomesteadClubs */,
 				2BA0482729FA276700476352 /* Products */,
 			);
@@ -188,16 +198,6 @@
 		B096D2702A2C10CA00498C33 /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				2BF635EC2A36AA5600B37553 /* Club+CoreDataClass.swift */,
-				2BF635ED2A36AA5600B37553 /* Club+CoreDataProperties.swift */,
-				2BF635EE2A36AA5600B37553 /* Activity+CoreDataClass.swift */,
-				2BF635EF2A36AA5600B37553 /* Activity+CoreDataProperties.swift */,
-				2BF635F02A36AA5600B37553 /* ActivityAttendance+CoreDataClass.swift */,
-				2BF635F12A36AA5600B37553 /* ActivityAttendance+CoreDataProperties.swift */,
-				2BF635F22A36AA5600B37553 /* Contact+CoreDataClass.swift */,
-				2BF635F32A36AA5600B37553 /* Contact+CoreDataProperties.swift */,
-				2BF635F42A36AA5600B37553 /* ClubMembership+CoreDataClass.swift */,
-				2BF635F52A36AA5600B37553 /* ClubMembership+CoreDataProperties.swift */,
 			);
 			path = CoreDataModels;
 			sourceTree = "<group>";
@@ -273,36 +273,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B7AB1AD2A242CE500A1C993 /* ContactViewModel.swift in Sources */,
-				2BF635FF2A36AA5600B37553 /* ClubMembership+CoreDataProperties.swift in Sources */,
+				B002D6C52A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift in Sources */,
 				2B7AB1A52A198DD700A1C993 /* VolunteerActivitiesView.swift in Sources */,
-				2BF635F92A36AA5600B37553 /* Activity+CoreDataProperties.swift in Sources */,
 				B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */,
-				2BF635FD2A36AA5600B37553 /* Contact+CoreDataProperties.swift in Sources */,
-				2BF635F62A36AA5600B37553 /* Club+CoreDataClass.swift in Sources */,
 				2BB8E0892A072C4800CB3F2D /* ActivityDetailView.swift in Sources */,
-				2BF635FB2A36AA5600B37553 /* ActivityAttendance+CoreDataProperties.swift in Sources */,
 				2B7AB1B12A242D9900A1C993 /* PersistenceController.swift in Sources */,
+				B002D6C22A3FF9E20051B4F6 /* Club+CoreDataClass.swift in Sources */,
 				2BB8E08D2A072C6B00CB3F2D /* ActivityAddView.swift in Sources */,
+				B002D6C12A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift in Sources */,
 				2BB8E03F2A04AC3800CB3F2D /* ActivityListView.swift in Sources */,
 				2BA0482C29FA276700476352 /* ContentView.swift in Sources */,
+				B002D6BF2A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift in Sources */,
 				2B7AB1AF2A242D6000A1C993 /* ActivityViewModel.swift in Sources */,
 				2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */,
 				2BBEDAC729FB751F00316CFD /* ContactDetailView.swift in Sources */,
 				2BA0483629FA276800476352 /* HomesteadClubs.xcdatamodeld in Sources */,
+				B002D6C32A3FF9E20051B4F6 /* Club+CoreDataProperties.swift in Sources */,
 				2BB8E06F2A06055300CB3F2D /* ContactEditView.swift in Sources */,
+				B002D6BD2A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift in Sources */,
 				2BA0482A29FA276700476352 /* HomesteadClubsApp.swift in Sources */,
-				2BF635F72A36AA5600B37553 /* Club+CoreDataProperties.swift in Sources */,
-				2BF635F82A36AA5600B37553 /* Activity+CoreDataClass.swift in Sources */,
+				B002D6BC2A3FF9E20051B4F6 /* Activity+CoreDataClass.swift in Sources */,
 				2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */,
-				2BF635FE2A36AA5600B37553 /* ClubMembership+CoreDataClass.swift in Sources */,
+				B002D6C42A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift in Sources */,
 				2B7AB1A72A19938400A1C993 /* VolunteerViewModel.swift in Sources */,
 				B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */,
-				2BF635FC2A36AA5600B37553 /* Contact+CoreDataClass.swift in Sources */,
 				2B7AB1A92A19981D00A1C993 /* Volunteer.swift in Sources */,
 				2B7AB1AB2A24101C00A1C993 /* MainView.swift in Sources */,
 				2B7AB1A32A198DB900A1C993 /* VolunteerListView.swift in Sources */,
+				B002D6BE2A3FF9E20051B4F6 /* Contact+CoreDataClass.swift in Sources */,
 				2BB8E08B2A072C5B00CB3F2D /* ActivityEditView.swift in Sources */,
-				2BF635FA2A36AA5600B37553 /* ActivityAttendance+CoreDataClass.swift in Sources */,
+				B002D6C02A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

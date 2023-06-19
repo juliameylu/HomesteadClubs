@@ -2,7 +2,7 @@
 //  ActivityAttendance+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/11/23.
+//  Created by Julia Lu on 6/18/23.
 //
 //
 

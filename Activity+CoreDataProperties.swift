@@ -2,7 +2,7 @@
 //  Activity+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/11/23.
+//  Created by Julia Lu on 6/18/23.
 //
 //
 
@@ -24,11 +24,11 @@ extension Activity {
     @NSManaged public var name: String?
     @NSManaged public var notes: String?
     @NSManaged public var state: String?
-    @NSManaged public var streetAddress: String?
+    @NSManaged public var street: String?
     @NSManaged public var zip: String?
     @NSManaged public var attendances: NSSet?
     @NSManaged public var sponsor: Contact?
-    
+
     public var attendanceArray: [ActivityAttendance] {
         let attendanceSet = attendances as? Set<ActivityAttendance> ?? []
         
