@@ -10,6 +10,7 @@ import SwiftUI
 struct ActivityDetailView: View {
     @EnvironmentObject var activityViewModel: ActivityViewModel
     @EnvironmentObject var contactViewModel: ContactViewModel
+    @EnvironmentObject var locationManager: LocationManager
     
     @State private var isShowAttendeesView = false
     @State private var isShowEditView = false
@@ -62,6 +63,20 @@ struct ActivityDetailView: View {
                     Text(activity.zip ?? "")
                 }
             }
+            .onTapGesture {
+                print("The whole VStack is tappable now!")
+                var locationString = activity.street! + " "
+                locationString += activity.city! + " "
+                locationString += activity.state!
+                locationManager.locationString = locationString
+                locationManager.openMapWithAddress()
+            }
+//            .alert(isPresented: $locationManager.invalid) {
+//                Alert(title: Text("Important message"), message: Text("Enter a valid address"), dismissButton: .default(Text("OK"), action:{
+//                    locationManager.invalid = false
+//                    locationManager.locationString = ""
+//                }))
+//            }
             
             Section(header: Text("Sponsor")) {
                 HStack {

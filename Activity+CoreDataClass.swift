@@ -2,7 +2,7 @@
 //  Activity+CoreDataClass.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/18/23.
+//  Created by Julia Lu on 6/25/23.
 //
 //
 

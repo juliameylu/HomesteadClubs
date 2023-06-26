@@ -28,16 +28,23 @@
 		2BBEDAC729FB751F00316CFD /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC429FB751F00316CFD /* ContactDetailView.swift */; };
 		2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC529FB751F00316CFD /* ContactAddView.swift */; };
 		2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEDAC629FB751F00316CFD /* ContactListView.swift */; };
-		B002D6BC2A3FF9E20051B4F6 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B22A3FF9E20051B4F6 /* Activity+CoreDataClass.swift */; };
-		B002D6BD2A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B32A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift */; };
-		B002D6BE2A3FF9E20051B4F6 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B42A3FF9E20051B4F6 /* Contact+CoreDataClass.swift */; };
-		B002D6BF2A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B52A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift */; };
 		B002D6C02A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B62A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift */; };
 		B002D6C12A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B72A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift */; };
 		B002D6C22A3FF9E20051B4F6 /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B82A3FF9E20051B4F6 /* Club+CoreDataClass.swift */; };
 		B002D6C32A3FF9E20051B4F6 /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6B92A3FF9E20051B4F6 /* Club+CoreDataProperties.swift */; };
 		B002D6C42A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6BA2A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift */; };
 		B002D6C52A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6BB2A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift */; };
+		B002D6C72A40081B0051B4F6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6C62A40081B0051B4F6 /* LocationManager.swift */; };
+		B002D6CA2A48EEF40051B4F6 /* FinanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6C92A48EEF40051B4F6 /* FinanceListView.swift */; };
+		B002D6D02A48F73E0051B4F6 /* FinanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6CF2A48F73E0051B4F6 /* FinanceViewModel.swift */; };
+		B002D6D32A48FB290051B4F6 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6D12A48FB290051B4F6 /* Contact+CoreDataClass.swift */; };
+		B002D6D42A48FB290051B4F6 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6D22A48FB290051B4F6 /* Contact+CoreDataProperties.swift */; };
+		B002D6D62A48FBAE0051B4F6 /* FinanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6D52A48FBAE0051B4F6 /* FinanceDetailView.swift */; };
+		B002D6D82A49021C0051B4F6 /* FinanceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6D72A49021C0051B4F6 /* FinanceEditView.swift */; };
+		B002D6DD2A490EDA0051B4F6 /* Payment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6D92A490EDA0051B4F6 /* Payment+CoreDataClass.swift */; };
+		B002D6DE2A490EDA0051B4F6 /* Payment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6DA2A490EDA0051B4F6 /* Payment+CoreDataProperties.swift */; };
+		B002D6DF2A490EDA0051B4F6 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6DB2A490EDA0051B4F6 /* Activity+CoreDataClass.swift */; };
+		B002D6E02A490EDA0051B4F6 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002D6DC2A490EDA0051B4F6 /* Activity+CoreDataProperties.swift */; };
 		B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2852A2D1EA200498C33 /* AttendeeListView.swift */; };
 		B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096D2872A2D231600498C33 /* AttendeeAddView.swift */; };
 /* End PBXBuildFile section */
@@ -65,16 +72,23 @@
 		2BBEDAC429FB751F00316CFD /* ContactDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		2BBEDAC529FB751F00316CFD /* ContactAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactAddView.swift; sourceTree = "<group>"; };
 		2BBEDAC629FB751F00316CFD /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
-		B002D6B22A3FF9E20051B4F6 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B002D6B32A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B002D6B42A3FF9E20051B4F6 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B002D6B52A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B002D6B62A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B002D6B72A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityAttendance+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B002D6B82A3FF9E20051B4F6 /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B002D6B92A3FF9E20051B4F6 /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B002D6BA2A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B002D6BB2A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubMembership+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B002D6C62A40081B0051B4F6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B002D6C92A48EEF40051B4F6 /* FinanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceListView.swift; sourceTree = "<group>"; };
+		B002D6CF2A48F73E0051B4F6 /* FinanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewModel.swift; sourceTree = "<group>"; };
+		B002D6D12A48FB290051B4F6 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B002D6D22A48FB290051B4F6 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B002D6D52A48FBAE0051B4F6 /* FinanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceDetailView.swift; sourceTree = "<group>"; };
+		B002D6D72A49021C0051B4F6 /* FinanceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceEditView.swift; sourceTree = "<group>"; };
+		B002D6D92A490EDA0051B4F6 /* Payment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B002D6DA2A490EDA0051B4F6 /* Payment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B002D6DB2A490EDA0051B4F6 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B002D6DC2A490EDA0051B4F6 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B096D2852A2D1EA200498C33 /* AttendeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListView.swift; sourceTree = "<group>"; };
 		B096D2872A2D231600498C33 /* AttendeeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,10 +116,12 @@
 		2BA0481D29FA276700476352 = {
 			isa = PBXGroup;
 			children = (
-				B002D6B22A3FF9E20051B4F6 /* Activity+CoreDataClass.swift */,
-				B002D6B32A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift */,
-				B002D6B42A3FF9E20051B4F6 /* Contact+CoreDataClass.swift */,
-				B002D6B52A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift */,
+				B002D6D92A490EDA0051B4F6 /* Payment+CoreDataClass.swift */,
+				B002D6DA2A490EDA0051B4F6 /* Payment+CoreDataProperties.swift */,
+				B002D6DB2A490EDA0051B4F6 /* Activity+CoreDataClass.swift */,
+				B002D6DC2A490EDA0051B4F6 /* Activity+CoreDataProperties.swift */,
+				B002D6D12A48FB290051B4F6 /* Contact+CoreDataClass.swift */,
+				B002D6D22A48FB290051B4F6 /* Contact+CoreDataProperties.swift */,
 				B002D6B62A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift */,
 				B002D6B72A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift */,
 				B002D6B82A3FF9E20051B4F6 /* Club+CoreDataClass.swift */,
@@ -175,6 +191,7 @@
 		2BBEDAC329FB749B00316CFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B002D6C82A48EEBC0051B4F6 /* Finances */,
 				2B7AB1A12A198D5F00A1C993 /* Volunteer */,
 				2BB8E0692A04B2F200CB3F2D /* Activities */,
 				2BB8E0682A04B2C800CB3F2D /* Contacts */,
@@ -191,8 +208,20 @@
 				2B7AB1A82A19981D00A1C993 /* Volunteer.swift */,
 				2B7AB1AC2A242CE500A1C993 /* ContactViewModel.swift */,
 				2B7AB1AE2A242D6000A1C993 /* ActivityViewModel.swift */,
+				B002D6C62A40081B0051B4F6 /* LocationManager.swift */,
+				B002D6CF2A48F73E0051B4F6 /* FinanceViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B002D6C82A48EEBC0051B4F6 /* Finances */ = {
+			isa = PBXGroup;
+			children = (
+				B002D6C92A48EEF40051B4F6 /* FinanceListView.swift */,
+				B002D6D52A48FBAE0051B4F6 /* FinanceDetailView.swift */,
+				B002D6D72A49021C0051B4F6 /* FinanceEditView.swift */,
+			);
+			path = Finances;
 			sourceTree = "<group>";
 		};
 		B096D2702A2C10CA00498C33 /* CoreDataModels */ = {
@@ -276,31 +305,38 @@
 				B002D6C52A3FF9E20051B4F6 /* ClubMembership+CoreDataProperties.swift in Sources */,
 				2B7AB1A52A198DD700A1C993 /* VolunteerActivitiesView.swift in Sources */,
 				B096D2882A2D231600498C33 /* AttendeeAddView.swift in Sources */,
+				B002D6C72A40081B0051B4F6 /* LocationManager.swift in Sources */,
+				B002D6D02A48F73E0051B4F6 /* FinanceViewModel.swift in Sources */,
 				2BB8E0892A072C4800CB3F2D /* ActivityDetailView.swift in Sources */,
 				2B7AB1B12A242D9900A1C993 /* PersistenceController.swift in Sources */,
 				B002D6C22A3FF9E20051B4F6 /* Club+CoreDataClass.swift in Sources */,
+				B002D6D62A48FBAE0051B4F6 /* FinanceDetailView.swift in Sources */,
 				2BB8E08D2A072C6B00CB3F2D /* ActivityAddView.swift in Sources */,
 				B002D6C12A3FF9E20051B4F6 /* ActivityAttendance+CoreDataProperties.swift in Sources */,
 				2BB8E03F2A04AC3800CB3F2D /* ActivityListView.swift in Sources */,
+				B002D6D82A49021C0051B4F6 /* FinanceEditView.swift in Sources */,
+				B002D6D42A48FB290051B4F6 /* Contact+CoreDataProperties.swift in Sources */,
 				2BA0482C29FA276700476352 /* ContentView.swift in Sources */,
-				B002D6BF2A3FF9E20051B4F6 /* Contact+CoreDataProperties.swift in Sources */,
+				B002D6DE2A490EDA0051B4F6 /* Payment+CoreDataProperties.swift in Sources */,
 				2B7AB1AF2A242D6000A1C993 /* ActivityViewModel.swift in Sources */,
+				B002D6E02A490EDA0051B4F6 /* Activity+CoreDataProperties.swift in Sources */,
 				2BBEDAC929FB751F00316CFD /* ContactListView.swift in Sources */,
+				B002D6DF2A490EDA0051B4F6 /* Activity+CoreDataClass.swift in Sources */,
+				B002D6CA2A48EEF40051B4F6 /* FinanceListView.swift in Sources */,
 				2BBEDAC729FB751F00316CFD /* ContactDetailView.swift in Sources */,
 				2BA0483629FA276800476352 /* HomesteadClubs.xcdatamodeld in Sources */,
 				B002D6C32A3FF9E20051B4F6 /* Club+CoreDataProperties.swift in Sources */,
 				2BB8E06F2A06055300CB3F2D /* ContactEditView.swift in Sources */,
-				B002D6BD2A3FF9E20051B4F6 /* Activity+CoreDataProperties.swift in Sources */,
 				2BA0482A29FA276700476352 /* HomesteadClubsApp.swift in Sources */,
-				B002D6BC2A3FF9E20051B4F6 /* Activity+CoreDataClass.swift in Sources */,
 				2BBEDAC829FB751F00316CFD /* ContactAddView.swift in Sources */,
 				B002D6C42A3FF9E20051B4F6 /* ClubMembership+CoreDataClass.swift in Sources */,
+				B002D6DD2A490EDA0051B4F6 /* Payment+CoreDataClass.swift in Sources */,
 				2B7AB1A72A19938400A1C993 /* VolunteerViewModel.swift in Sources */,
 				B096D2862A2D1EA200498C33 /* AttendeeListView.swift in Sources */,
 				2B7AB1A92A19981D00A1C993 /* Volunteer.swift in Sources */,
+				B002D6D32A48FB290051B4F6 /* Contact+CoreDataClass.swift in Sources */,
 				2B7AB1AB2A24101C00A1C993 /* MainView.swift in Sources */,
 				2B7AB1A32A198DB900A1C993 /* VolunteerListView.swift in Sources */,
-				B002D6BE2A3FF9E20051B4F6 /* Contact+CoreDataClass.swift in Sources */,
 				2BB8E08B2A072C5B00CB3F2D /* ActivityEditView.swift in Sources */,
 				B002D6C02A3FF9E20051B4F6 /* ActivityAttendance+CoreDataClass.swift in Sources */,
 			);

@@ -2,7 +2,7 @@
 //  Contact+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/18/23.
+//  Created by Julia Lu on 6/25/23.
 //
 //
 
@@ -26,7 +26,8 @@ extension Contact {
     @NSManaged public var attending: NSSet?
     @NSManaged public var membership: NSSet?
     @NSManaged public var sponsor: Activity?
-
+    @NSManaged public var finances: Payment?
+    
     public var membershipArray: [ActivityAttendance] {
         let attendanceSet = attending as? Set<ActivityAttendance> ?? []
         

@@ -2,7 +2,7 @@
 //  Activity+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/18/23.
+//  Created by Julia Lu on 6/25/23.
 //
 //
 
@@ -28,7 +28,8 @@ extension Activity {
     @NSManaged public var zip: String?
     @NSManaged public var attendances: NSSet?
     @NSManaged public var sponsor: Contact?
-
+    @NSManaged public var recieves: NSSet?
+    
     public var attendanceArray: [ActivityAttendance] {
         let attendanceSet = attendances as? Set<ActivityAttendance> ?? []
         
@@ -53,6 +54,23 @@ extension Activity {
 
     @objc(removeAttendances:)
     @NSManaged public func removeFromAttendances(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for recieves
+extension Activity {
+
+    @objc(addRecievesObject:)
+    @NSManaged public func addToRecieves(_ value: Payment)
+
+    @objc(removeRecievesObject:)
+    @NSManaged public func removeFromRecieves(_ value: Payment)
+
+    @objc(addRecieves:)
+    @NSManaged public func addToRecieves(_ values: NSSet)
+
+    @objc(removeRecieves:)
+    @NSManaged public func removeFromRecieves(_ values: NSSet)
 
 }
 

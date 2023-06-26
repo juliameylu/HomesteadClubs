@@ -30,6 +30,11 @@ struct MainView: View {
                     Image(systemName: "person.fill")
                     Text("Hours")
             }
+            FinanceListView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Finances")
+            }
         } // TabView
     }
 }

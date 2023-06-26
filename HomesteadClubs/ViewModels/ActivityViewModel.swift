@@ -6,6 +6,10 @@
 //
 
 import Foundation
+import UIKit
+import MapKit
+import CoreLocation
+import Combine
 
 import CoreData
 
@@ -13,6 +17,8 @@ class ActivityViewModel: ObservableObject {
     private let viewContext = PersistenceController.shared.viewContext
     @Published var activities: [Activity] = []
     @Published var upcomingActivities: [Activity] = []
+    
+    //lazy var geocoder = CLGeocoder()
 
     init() {
         fetchActivities()
@@ -160,4 +166,31 @@ class ActivityViewModel: ObservableObject {
 
         return calendar.date(from: components)!
     }
+    
+//    func openMapWithAddress(locationString: String) -> Error? {
+//
+//        geocoder.geocodeAddressString(locationString) { placemarks, error in
+//            if let error = error {
+//                return error
+//            }
+//
+//            guard let placemark = placemarks?.first else {
+//                return
+//            }
+//
+//            guard let lat = placemark.location?.coordinate.latitude else{return}
+//
+//            guard let lon = placemark.location?.coordinate.longitude else{return}
+//
+//            let coords = CLLocationCoordinate2DMake(lat, lon)
+//
+//            let place = MKPlacemark(coordinate: coords)
+//
+//            let mapItem = MKMapItem(placemark: place)
+//            mapItem.name = locationString
+//            mapItem.openInMaps(launchOptions: nil)
+//        }
+//
+//        return nil
+//    }
 }

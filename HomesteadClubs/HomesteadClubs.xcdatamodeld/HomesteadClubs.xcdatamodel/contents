@@ -12,6 +12,7 @@
         <attribute name="street" optional="YES" attributeType="String"/>
         <attribute name="zip" optional="YES" attributeType="String"/>
         <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ActivityAttendance" inverseName="attending" inverseEntity="ActivityAttendance"/>
+        <relationship name="recieves" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payment" inverseName="pays" inverseEntity="Payment"/>
         <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="sponsor" inverseEntity="Contact"/>
     </entity>
     <entity name="ActivityAttendance" representedClassName=".ActivityAttendance" syncable="YES">
@@ -39,7 +40,17 @@
         <attribute name="middle_name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
         <relationship name="attending" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ActivityAttendance" inverseName="attendedBy" inverseEntity="ActivityAttendance"/>
+        <relationship name="finances" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Payment" inverseName="financer" inverseEntity="Payment"/>
         <relationship name="membership" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ClubMembership" inverseName="member" inverseEntity="ClubMembership"/>
         <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="sponsor" inverseEntity="Activity"/>
+    </entity>
+    <entity name="Payment" representedClassName=".Payment" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="financer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="finances" inverseEntity="Contact"/>
+        <relationship name="pays" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="recieves" inverseEntity="Activity"/>
     </entity>
 </model>
