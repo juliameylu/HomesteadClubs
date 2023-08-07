@@ -2,7 +2,7 @@
 //  Contact+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/25/23.
+//  Created by Julia Lu on 8/6/23.
 //
 //
 
@@ -24,9 +24,9 @@ extension Contact {
     @NSManaged public var middle_name: String?
     @NSManaged public var phone: String?
     @NSManaged public var attending: NSSet?
+    @NSManaged public var finances: NSSet?
     @NSManaged public var membership: NSSet?
-    @NSManaged public var sponsor: Activity?
-    @NSManaged public var finances: Payment?
+    @NSManaged public var sponsor: NSSet?
     
     public var membershipArray: [ActivityAttendance] {
         let attendanceSet = attending as? Set<ActivityAttendance> ?? []
@@ -54,6 +54,23 @@ extension Contact {
 
 }
 
+// MARK: Generated accessors for finances
+extension Contact {
+
+    @objc(addFinancesObject:)
+    @NSManaged public func addToFinances(_ value: Payment)
+
+    @objc(removeFinancesObject:)
+    @NSManaged public func removeFromFinances(_ value: Payment)
+
+    @objc(addFinances:)
+    @NSManaged public func addToFinances(_ values: NSSet)
+
+    @objc(removeFinances:)
+    @NSManaged public func removeFromFinances(_ values: NSSet)
+
+}
+
 // MARK: Generated accessors for membership
 extension Contact {
 
@@ -68,6 +85,23 @@ extension Contact {
 
     @objc(removeMembership:)
     @NSManaged public func removeFromMembership(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for sponsor
+extension Contact {
+
+    @objc(addSponsorObject:)
+    @NSManaged public func addToSponsor(_ value: Activity)
+
+    @objc(removeSponsorObject:)
+    @NSManaged public func removeFromSponsor(_ value: Activity)
+
+    @objc(addSponsor:)
+    @NSManaged public func addToSponsor(_ values: NSSet)
+
+    @objc(removeSponsor:)
+    @NSManaged public func removeFromSponsor(_ values: NSSet)
 
 }
 

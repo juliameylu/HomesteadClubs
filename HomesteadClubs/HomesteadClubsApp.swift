@@ -13,6 +13,7 @@ struct HomesteadClubsApp: App {
     @StateObject var activityViewModel = ActivityViewModel()
     @StateObject var volunteerViewModel = VolunteerViewModel()
     @StateObject var locationManager = LocationManager()
+    @StateObject var financeViewModel = FinanceViewModel()
 
     var body: some Scene {
         WindowGroup {
@@ -21,6 +22,7 @@ struct HomesteadClubsApp: App {
                 .environmentObject(activityViewModel)
                 .environmentObject(volunteerViewModel)
                 .environmentObject(locationManager)
+                .environmentObject(financeViewModel)
         }
     }
 }

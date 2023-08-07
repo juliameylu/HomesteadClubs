@@ -16,6 +16,12 @@ struct FinanceDetailView: View {
     
     var payment: Payment
     
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
+    
     var body: some View {
         Form {
             Section(header: Text("Type")) {
@@ -33,6 +39,26 @@ struct FinanceDetailView: View {
                 } // VStack
             } // Section
             
+            Section(header: Text("Activity")) {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Image("activity")
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                        
+                        Text(payment.name ?? "")
+                            .fontWeight(.semibold)
+                            .font(.headline)
+                    }
+                } // VStack
+            } // Section
+            
+            Section("Amount") {
+                VStack(alignment: .leading) {
+                    Text("\((payment.amount ?? 0.0) as NSDecimalNumber, formatter: numberFormatter)")
+                }
+            }
+            
             Section("Person") {
                 VStack(alignment: .leading) {
                     Text(payment.financer?.first_name ?? "")
@@ -40,9 +66,10 @@ struct FinanceDetailView: View {
                 }
             }
             
-            Section("Amount") {
+            //Date
+            Section("Date") {
                 VStack(alignment: .leading) {
-                    Text(payment.amount ?? "")
+                    Text(payment.date ?? Date.now, style: .date)
                 }
             }
             
@@ -59,9 +86,8 @@ struct FinanceDetailView: View {
             Button("Edit", action: { isPresentingEditView = true })
         } // toolbar
         .sheet(isPresented: $isPresentingEditView) {
-            FinanceEditView(
-                payment: payment)
-                .navigationTitle(payment.financer.first_name ?? "")
+            FinanceEditView(payment: payment)
+            .navigationTitle(payment.name ?? "")
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button("Cancel") {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activity" representedClassName=".Activity" syncable="YES">
         <attribute name="beginDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="city" optional="YES" attributeType="String"/>
@@ -12,7 +12,7 @@
         <attribute name="street" optional="YES" attributeType="String"/>
         <attribute name="zip" optional="YES" attributeType="String"/>
         <relationship name="attendances" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ActivityAttendance" inverseName="attending" inverseEntity="ActivityAttendance"/>
-        <relationship name="recieves" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payment" inverseName="pays" inverseEntity="Payment"/>
+        <relationship name="receives" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payment" inverseName="pays" inverseEntity="Payment"/>
         <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="sponsor" inverseEntity="Contact"/>
     </entity>
     <entity name="ActivityAttendance" representedClassName=".ActivityAttendance" syncable="YES">
@@ -40,9 +40,9 @@
         <attribute name="middle_name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
         <relationship name="attending" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ActivityAttendance" inverseName="attendedBy" inverseEntity="ActivityAttendance"/>
-        <relationship name="finances" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Payment" inverseName="financer" inverseEntity="Payment"/>
+        <relationship name="finances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payment" inverseName="financer" inverseEntity="Payment"/>
         <relationship name="membership" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ClubMembership" inverseName="member" inverseEntity="ClubMembership"/>
-        <relationship name="sponsor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="sponsor" inverseEntity="Activity"/>
+        <relationship name="sponsor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="sponsor" inverseEntity="Activity"/>
     </entity>
     <entity name="Payment" representedClassName=".Payment" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
@@ -51,6 +51,6 @@
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <relationship name="financer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="finances" inverseEntity="Contact"/>
-        <relationship name="pays" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="recieves" inverseEntity="Activity"/>
+        <relationship name="pays" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="receives" inverseEntity="Activity"/>
     </entity>
 </model>

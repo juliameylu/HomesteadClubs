@@ -11,7 +11,7 @@ struct ActivityListView: View {
     @EnvironmentObject var activityViewModel : ActivityViewModel
     @EnvironmentObject var contactViewModel : ContactViewModel
     
-    @State var showActivityAddView: Bool = false
+    @State private var showActivityAddView = false
     
     var body: some View {
         NavigationStack {

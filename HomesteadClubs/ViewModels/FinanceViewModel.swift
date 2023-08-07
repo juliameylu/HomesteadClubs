@@ -13,10 +13,10 @@ class FinanceViewModel: ObservableObject {
     @Published var payments: [Payment] = []
     
     init() {
-        fetchFinances()
+        fetchPayments()
     }
     
-    func fetchFinances() {
+    func fetchPayments() {
         let request = NSFetchRequest<Payment>(entityName: "Payment")
 
         do {
@@ -26,6 +26,47 @@ class FinanceViewModel: ObservableObject {
             
         } catch {
             print("DEBUG: Some error occured while fetching")
+        }
+    }
+    
+    func editPayment(payment: Payment) {
+        saveAndReinitialize()
+    }
+    
+    func saveAndReinitialize() {
+        save()
+        fetchPayments()
+    }
+    
+    func save() {
+        do {
+            try viewContext.save()
+        } catch {
+            print("Error saving")
+        }
+    }
+    
+    func addPayment(amount: NSDecimalNumber, type: String, date: Date, name: String, notes: String, financer: Contact?, pays: Activity?) {
+        let payment = Payment(context: viewContext)
+        
+        payment.amount = amount
+        payment.type = type
+        payment.date = date
+        payment.name = name
+        payment.notes = notes
+        payment.financer = financer
+        payment.pays = pays
+        
+        save()
+        fetchPayments()
+    }
+    
+    func delete(payment: Payment) {
+        viewContext.delete(payment)
+        do {
+            try viewContext.save()
+        } catch {
+            print("DEBUG: Some error occured while saving")
         }
     }
 }

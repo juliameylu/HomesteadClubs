@@ -2,7 +2,7 @@
 //  Activity+CoreDataProperties.swift
 //  HomesteadClubs
 //
-//  Created by Julia Lu on 6/25/23.
+//  Created by Julia Lu on 8/6/23.
 //
 //
 
@@ -27,16 +27,16 @@ extension Activity {
     @NSManaged public var street: String?
     @NSManaged public var zip: String?
     @NSManaged public var attendances: NSSet?
+    @NSManaged public var receives: NSSet?
     @NSManaged public var sponsor: Contact?
-    @NSManaged public var recieves: NSSet?
     
     public var attendanceArray: [ActivityAttendance] {
         let attendanceSet = attendances as? Set<ActivityAttendance> ?? []
         
         return attendanceSet
             .sorted {
-            $0.attendedBy!.first_name! > $1.attendedBy!.first_name!
-        }
+                $0.attendedBy!.first_name! > $1.attendedBy!.first_name!
+            }
     }
 }
 
@@ -57,20 +57,20 @@ extension Activity {
 
 }
 
-// MARK: Generated accessors for recieves
+// MARK: Generated accessors for receives
 extension Activity {
 
-    @objc(addRecievesObject:)
-    @NSManaged public func addToRecieves(_ value: Payment)
+    @objc(addReceivesObject:)
+    @NSManaged public func addToReceives(_ value: Payment)
 
-    @objc(removeRecievesObject:)
-    @NSManaged public func removeFromRecieves(_ value: Payment)
+    @objc(removeReceivesObject:)
+    @NSManaged public func removeFromReceives(_ value: Payment)
 
-    @objc(addRecieves:)
-    @NSManaged public func addToRecieves(_ values: NSSet)
+    @objc(addReceives:)
+    @NSManaged public func addToReceives(_ values: NSSet)
 
-    @objc(removeRecieves:)
-    @NSManaged public func removeFromRecieves(_ values: NSSet)
+    @objc(removeReceives:)
+    @NSManaged public func removeFromReceives(_ values: NSSet)
 
 }
 

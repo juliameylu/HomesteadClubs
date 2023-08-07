@@ -116,7 +116,7 @@ struct ActivityAddView: View {
                         if (creditHours <= 0) {
                             showErrorMessage = true
                         } else {
-                            activityViewModel.addActivity(name: name, notes: notes, beginDateTime: beginDateTime, endDateTime: endDateTime, creditHours: creditHours, sponsor: sponsor!,
+                            activityViewModel.addActivity(name: name, notes: notes, beginDateTime: beginDateTime, endDateTime: endDateTime, creditHours: creditHours, sponsor: sponsor,
                                                           street: street, city: city, state: state, zip: zip)
                             self.readyToNavigate = true
                             self.presentationMode.wrappedValue.dismiss()

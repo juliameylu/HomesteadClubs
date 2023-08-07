@@ -48,7 +48,7 @@ class ActivityViewModel: ObservableObject {
             .filter{ !activityMembers.contains($0) }
     }
     
-    func addActivity(name: String, notes: String, beginDateTime: Date, endDateTime: Date, creditHours: Float, sponsor: Contact,
+    func addActivity(name: String, notes: String, beginDateTime: Date, endDateTime: Date, creditHours: Float, sponsor: Contact?,
                      street: String, city: String, state: String, zip: String) {
         let activity = Activity(context: viewContext)
         

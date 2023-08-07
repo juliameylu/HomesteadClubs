@@ -10,7 +10,13 @@ import SwiftUI
 struct FinanceListView: View {
     @EnvironmentObject var financeViewModel : FinanceViewModel
     
-    @State var showNewFinanceView: Bool = false
+    @State var showFinanceAddView: Bool = false
+    
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
     
     var body: some View {
         NavigationStack {
@@ -24,21 +30,23 @@ struct FinanceListView: View {
                                 Text(payment.type ?? "")
                             }
                             HStack {
-                                Image("contact")
+                                Image("finance")
                                     .clipShape(Circle())
                                     .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                                
-                                Text(payment.financer.first_name ?? "")
-                                
-                                if let middleName = payment.financer.middle_name {
+                                Text(payment.date ?? Date.now, style: .date)
+                            }
+                            HStack {
+                                Text(payment.financer?.first_name ?? "")
+
+                                if let middleName = payment.financer?.middle_name {
                                     Text(middleName)
                                 }
-                                
-                                Text(payment.financer.last_name ?? "")
+
+                                Text(payment.financer?.last_name ?? "")
                             }
                             HStack {
                                 Text("Amount:")
-                                Text(String(payment.amount))
+                                Text("\((payment.amount ?? 0.0) as NSDecimalNumber, formatter: numberFormatter)")
                             }
                         } // VStack
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -46,11 +54,27 @@ struct FinanceListView: View {
                         .padding(.bottom)
                     } // label, NavigationLink
                 } // ForEach
+                .onDelete(perform: deletePayments)
             } // List
             .navigationTitle("Finances")
+            .sheet(isPresented: $showFinanceAddView) {
+                FinanceAddView()
+            }
+            .navigationBarItems(trailing:
+                                    Button (action: {
+                showFinanceAddView.toggle()
+            }) {
+                Image(systemName: "plus")
+            }
+            )
         } // NavigationStack
-        .onAppear {
-            financeViewModel.fetchFinances()
+    }
+    
+    func deletePayments(at offsets: IndexSet) {
+        for index in offsets {
+            let payment = financeViewModel.payments[index]
+            financeViewModel.delete(payment: payment)
+            financeViewModel.fetchPayments()
         }
     }
 }
