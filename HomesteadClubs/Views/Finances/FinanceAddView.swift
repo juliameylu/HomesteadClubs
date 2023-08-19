@@ -126,6 +126,9 @@ struct FinanceAddView: View {
             if !contactViewModel.contacts.isEmpty {
                 self.person = contactViewModel.contacts[0]
             }
+            if !activityViewModel.activities.isEmpty {
+                self.activity = activityViewModel.activities[0]
+            }
         }
     } // body
 }
